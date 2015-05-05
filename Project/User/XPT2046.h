@@ -27,5 +27,6 @@ uint16_t XPT2046_read();
 uint8_t XPT2046_pressed();
 void XPT2046_round_read();
 void XPT2046_to_240_320();
+void get_touch_coordinates(uint16_t* X, uint16_t* Y); //"high" function
 
 #endif

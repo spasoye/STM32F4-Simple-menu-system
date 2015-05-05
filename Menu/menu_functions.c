@@ -19,7 +19,6 @@
 
 
 char LED_initialized = 0;
-uint16_t X0, Y0;	//Touch coordinates
 
 
 void LED(){
@@ -161,6 +160,7 @@ void verzija(){
 
 void touch(){
 	char pen_size;
+	uint16_t X, Y;
 	uint32_t i;
 	TM_ILI9341_Fill(ILI9341_COLOR_BLACK);
 	TM_ILI9341_Puts(5, 5, "Color:", &PAINT_FONT, ILI9341_COLOR_WHITE, ILI9341_TRANSPARENT);
@@ -174,35 +174,12 @@ void touch(){
 			}
 		}
 		
-	//	get_touch_
+		get_touch_coordinates(&X, &Y);
+		TM_ILI9341_DrawFilledCircle(X,Y,pen_size,ILI9341_COLOR_WHITE);
 		if(get_key(27)) return;
 	}
 }
-void get_touch_coordinates(){
-			
-			char number[10];
-			if(GPIO_ReadInputDataBit(XPT2046_PENIRQ_PORT, XPT2046_PENIRQ_PIN)==0){
-			XPT2046_to_240_320();
-			XPT2046_to_240_320();
-			XPT2046_to_240_320();
-			X0 = X_point;
-			Y0 = Y_point;
-			XPT2046_to_240_320();
-			if((X_point >= (X0 - 4) && X_point <= (X0 + 4)) && (Y_point >= (Y0 - 4) && Y_point <= (Y0 + 4))){
-				X0 = X_point;
-				Y0 = Y_point;
-			
-				uint16tostr(number, X0, 10);
-				USART_puts(USART1, "X: ");
-				USART_puts(USART1, number);
-				USART_puts(USART1, "\n\r");
-				uint16tostr(number, Y0, 10);
-				USART_puts(USART1, "Y: ");
-				USART_puts(USART1, number);
-				USART_puts(USART1, "\n\r");
-			}
-		}
-}
+
 void uint16tostr(char buf[], uint32_t d, uint8_t base)
 {
     uint32_t div = 1;

@@ -5,6 +5,7 @@
 
 uint16_t X_point;
 uint16_t Y_point;
+uint16_t X0, Y0;	//Touch coordinates
 
 /////////////////////////////////
 void XPT2046_Init(){
@@ -91,10 +92,11 @@ void XPT2046_round_read(){
 
 ////////////////////////////////////////
 //Converting touch coordinates to display coordinates
+//Todo: orientation change
 void XPT2046_to_240_320(){
 	XPT2046_round_read();
-	X_point = ((uint16_t)((X_point-173)/6.863)*(-1))+240;
-	Y_point = ((uint16_t)((Y_point-245)/5.056)*(-1))+320;
+	X_point = ((uint16_t)((X_point-173)/6.863)*(-1))+240;	//Calibration of X coordinates
+	Y_point = ((uint16_t)((Y_point-245)/5.056)*(-1))+320;	//Calibration of Y coordinates
 	if(X_point > 240){
 		X_point = 240;
 	}
@@ -102,3 +104,32 @@ void XPT2046_to_240_320(){
 		Y_point = 320;
 	}
 }
+
+////////////////////////////////////////
+//Final coordinates
+void get_touch_coordinates(uint16_t* X, uint16_t* Y){
+			
+			char number[10];
+			if(GPIO_ReadInputDataBit(XPT2046_PENIRQ_PORT, XPT2046_PENIRQ_PIN)==0){
+			XPT2046_to_240_320();
+			X0 = X_point;
+			Y0 = Y_point;
+			XPT2046_to_240_320();
+			
+			if((X_point >= (X0 - 4) && X_point <= (X0 + 4)) && (Y_point >= (Y0 - 4) && Y_point <= (Y0 + 4))){
+				X0 = X_point;
+				Y0 = Y_point;
+				*X = X0;
+				*Y = Y0;
+//				uint16tostr(number, X0, 10);
+//				USART_puts(USART1, "X: ");
+//				USART_puts(USART1, number);
+//				USART_puts(USART1, "\n\r");
+//				uint16tostr(number, Y0, 10);
+//				USART_puts(USART1, "Y: ");
+//				USART_puts(USART1, number);
+//				USART_puts(USART1, "\n\r");
+			}
+		}
+}
+////////////////////////////////////////
