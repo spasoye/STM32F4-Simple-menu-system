@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Build\LCD_menu.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Build\LCD_menu.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Tue May 05 13:52:52 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Tue May 05 17:27:14 2015
 <BR><P>
 <H3>Maximum Stack Usage =       1472 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -713,8 +713,8 @@ Global Symbols
 
 <P><STRONG><a name="[132]"></a>XPT2046_pressed</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, xpt2046.o(.text), UNUSED)
 
-<P><STRONG><a name="[9c]"></a>XPT2046_round_read</STRONG> (Thumb, 104 bytes, Stack size 144 bytes, xpt2046.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
+<P><STRONG><a name="[9c]"></a>XPT2046_round_read</STRONG> (Thumb, 108 bytes, Stack size 64 bytes, xpt2046.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;XPT2046_read
 </UL>
@@ -722,7 +722,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9d]"></a>XPT2046_to_240_320</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, xpt2046.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = XPT2046_to_240_320 &rArr; XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = XPT2046_to_240_320 &rArr; XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;XPT2046_round_read
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
@@ -732,8 +732,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_touch_coordinates
 </UL>
 
-<P><STRONG><a name="[a1]"></a>get_touch_coordinates</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, xpt2046.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = get_touch_coordinates &rArr; XPT2046_to_240_320 &rArr; XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
+<P><STRONG><a name="[a1]"></a>get_touch_coordinates</STRONG> (Thumb, 178 bytes, Stack size 32 bytes, xpt2046.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = get_touch_coordinates &rArr; XPT2046_to_240_320 &rArr; XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;XPT2046_to_240_320
@@ -1888,7 +1888,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
 </UL>
 <P><STRONG><a name="[6]"></a>touch</STRONG> (Thumb, 340 bytes, Stack size 40 bytes, menu_functions.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = touch &rArr; get_touch_coordinates &rArr; XPT2046_to_240_320 &rArr; XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
+<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = touch &rArr; get_touch_coordinates &rArr; XPT2046_to_240_320 &rArr; XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawFilledCircle
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_touch_coordinates

@@ -6,6 +6,7 @@
 uint16_t X_point;
 uint16_t Y_point;
 uint16_t X0, Y0;	//Touch coordinates
+char pen_up_flag = 1;
 
 /////////////////////////////////
 void XPT2046_Init(){
@@ -65,11 +66,11 @@ uint8_t XPT2046_pressed(){
 /////////////////////////////////
 void XPT2046_round_read(){
 		u8 t,t1,count=0, i;
-		u16 databuffer[2][30];
+		u16 databuffer[2][10];
 		u16 temp=0;	
 		uint16_t Y_middle = 0, X_middle = 0;
 			  
-		while(count<30)
+		while(count<10)
 			{
 				{	if(XPT2046_read())
 					{
@@ -79,14 +80,14 @@ void XPT2046_round_read(){
 					}
 				}
 			}
-		for(i = 7; i < 23; i++){
+		for(i = 0; i < 10; i++){
 			X_middle = X_middle + databuffer[0][i];
 			Y_middle = Y_middle + databuffer[1][i];
 		}
 	
 
-		X_point = X_middle/16;
-		Y_point = 2048 - Y_middle/16;
+		X_point = X_middle/10;
+		Y_point = 2048 - Y_middle/10;
 }
 ////////////////////////////////////////
 
@@ -109,27 +110,32 @@ void XPT2046_to_240_320(){
 //Final coordinates
 void get_touch_coordinates(uint16_t* X, uint16_t* Y){
 			
-			char number[10];
+			char number[10],i;
 			if(GPIO_ReadInputDataBit(XPT2046_PENIRQ_PORT, XPT2046_PENIRQ_PIN)==0){
-			XPT2046_to_240_320();
-			X0 = X_point;
-			Y0 = Y_point;
-			XPT2046_to_240_320();
-			
-			if((X_point >= (X0 - 4) && X_point <= (X0 + 4)) && (Y_point >= (Y0 - 4) && Y_point <= (Y0 + 4))){
+				if(pen_up_flag){
+					for(i = 0; i<100; i++){
+						XPT2046_to_240_320();		//or simple delay
+					}
+					pen_up_flag = 0;
+				}
+				XPT2046_to_240_320();
 				X0 = X_point;
 				Y0 = Y_point;
-				*X = X0;
-				*Y = Y0;
-//				uint16tostr(number, X0, 10);
-//				USART_puts(USART1, "X: ");
-//				USART_puts(USART1, number);
-//				USART_puts(USART1, "\n\r");
-//				uint16tostr(number, Y0, 10);
-//				USART_puts(USART1, "Y: ");
-//				USART_puts(USART1, number);
-//				USART_puts(USART1, "\n\r");
+				XPT2046_to_240_320();
+			
+				if((X_point >= (X0 - 3) && X_point <= (X0 + 3)) && (Y_point >= (Y0 - 3) && Y_point <= (Y0 + 3))){
+					XPT2046_to_240_320();
+					X0 = X_point;
+					Y0 = Y_point;
+					XPT2046_to_240_320();
+					if((X_point >= (X0 - 2) && X_point <= (X0 + 2)) && (Y_point >= (Y0 - 2) && Y_point <= (Y0 + 2))){
+						X0 = X_point;
+						Y0 = Y_point;
+						*X = X0;
+						*Y = Y0;
+					}
+				}
+				if(GPIO_ReadInputDataBit(XPT2046_PENIRQ_PORT, XPT2046_PENIRQ_PIN)==1)pen_up_flag = 1;
 			}
-		}
 }
 ////////////////////////////////////////

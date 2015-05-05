@@ -1,13 +1,13 @@
 /*You shoul define your menu and submenu functions here*/
 #include "menu_functions.h"
-#include "USART.h"
+#include "USART.h"		//
 #include "menu_event.h"
 #include "stm32f4_discovery.h"	//Demonstration purposes
 #include "tm_stm32f4_ili9341.h"	//Demonstration purposes
-#include "tm_stm32f4_delay.h"	
-#include "tm_stm32f4_timer_properties.h"	
-#include "tm_stm32f4_fonts.h"	
-#include "XPT2046.h"
+#include "tm_stm32f4_delay.h"		//
+#include "tm_stm32f4_timer_properties.h"	//	
+#include "tm_stm32f4_fonts.h"	//
+#include "XPT2046.h"	//
 
 #define TERMINAL_WIDTH 240
 #define TERMINAL_HEIGHT 320

@@ -2,7 +2,7 @@
 #define	MENU_SYSTEM_H
 
 #include "stdint.h"
-#include "tm_stm32f4_fonts.h"
+#include "tm_stm32f4_fonts.h"	///
 #define TITLE_MAX	20
 #define	SUBMENU_MAX 30
 
@@ -46,5 +46,6 @@ void cycle_menu(menu* menu);
 void display_menu(display* display);
 void update_display(menu* menu, display* display);
 void init_display(menu* menu, display* display);
+void define_buttons(); //defines buttons on some parts of display surface, max 100 buttons- defined in menu_button.h
 
 #endif
