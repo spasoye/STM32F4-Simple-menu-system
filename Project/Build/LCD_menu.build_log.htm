@@ -1,0 +1,264 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: John Doe, None, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.14.0.0
+Toolchain Path:  D:\Program Files\Keil uVision 5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+D:\STM32F4\Završni rad\Project\LCD_menu.uvproj
+Project File Date:  05/04/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling startup_stm32f40xx.s...
+compiling system_stm32f4xx.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+User\system_stm32f4xx.c: 1 warning, 0 errors
+compiling main.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\Menu\menu_system.h(50): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Menu\menu_functions.h(27): warning:  #1295-D: Deprecated declaration LED - give arg types
+  void LED();
+..\Menu\menu_functions.h(28): warning:  #1295-D: Deprecated declaration verzija - give arg types
+  void verzija();
+..\Menu\menu_functions.h(29): warning:  #1295-D: Deprecated declaration apocalypse - give arg types
+  void apocalypse();
+..\Menu\menu_functions.h(31): warning:  #1295-D: Deprecated declaration touch - give arg types
+  void touch();
+..\Menu\menu_functions.h(34): warning:  #1295-D: Deprecated declaration terminal - give arg types
+  void terminal();
+..\Menu\menu_functions.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+User\main.h(118): warning:  #1-D: last line of file ends without a newline
+  #endif
+User\USART.h(8): warning:  #1295-D: Deprecated declaration USART1_IRQHandler - give arg types
+  void USART1_IRQHandler();
+User\XPT2046.h(22): warning:  #1295-D: Deprecated declaration XPT2046_Init - give arg types
+  void XPT2046_Init();
+User\XPT2046.h(24): warning:  #1295-D: Deprecated declaration XPT2046_read_x - give arg types
+  uint16_t XPT2046_read_x();
+User\XPT2046.h(25): warning:  #1295-D: Deprecated declaration XPT2046_read_y - give arg types
+  uint16_t XPT2046_read_y();
+User\XPT2046.h(26): warning:  #1295-D: Deprecated declaration XPT2046_read - give arg types
+  uint16_t XPT2046_read();
+User\XPT2046.h(27): warning:  #1295-D: Deprecated declaration XPT2046_pressed - give arg types
+  uint8_t XPT2046_pressed();
+User\XPT2046.h(28): warning:  #1295-D: Deprecated declaration XPT2046_round_read - give arg types
+  void XPT2046_round_read();
+User\XPT2046.h(29): warning:  #1295-D: Deprecated declaration XPT2046_to_240_320 - give arg types
+  void XPT2046_to_240_320();
+User\XPT2046.h(31): warning:  #1-D: last line of file ends without a newline
+  #endif
+User\main.c(36): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "TaskFunction_t"
+                xTaskCreate(RTOS_test , "PWM", 512, NULL, 1, NULL );
+User\main.c(37): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "TaskFunction_t"
+                xTaskCreate(menu_task , "PWM", 512, NULL, 1, NULL );
+User\main.c: 20 warnings, 0 errors
+compiling stm32f4xx_it.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+User\stm32f4xx_it.c: 1 warning, 0 errors
+compiling USART.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+User\USART.h(8): warning:  #1295-D: Deprecated declaration USART1_IRQHandler - give arg types
+  void USART1_IRQHandler();
+..\Menu\menu_event.h(15): warning:  #1295-D: Deprecated declaration read_key - give arg types
+  char read_key();
+..\Menu\menu_event.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
+User\USART.c: 4 warnings, 0 errors
+compiling XPT2046.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+User\XPT2046.h(22): warning:  #1295-D: Deprecated declaration XPT2046_Init - give arg types
+  void XPT2046_Init();
+User\XPT2046.h(24): warning:  #1295-D: Deprecated declaration XPT2046_read_x - give arg types
+  uint16_t XPT2046_read_x();
+User\XPT2046.h(25): warning:  #1295-D: Deprecated declaration XPT2046_read_y - give arg types
+  uint16_t XPT2046_read_y();
+User\XPT2046.h(26): warning:  #1295-D: Deprecated declaration XPT2046_read - give arg types
+  uint16_t XPT2046_read();
+User\XPT2046.h(27): warning:  #1295-D: Deprecated declaration XPT2046_pressed - give arg types
+  uint8_t XPT2046_pressed();
+User\XPT2046.h(28): warning:  #1295-D: Deprecated declaration XPT2046_round_read - give arg types
+  void XPT2046_round_read();
+User\XPT2046.h(29): warning:  #1295-D: Deprecated declaration XPT2046_to_240_320 - give arg types
+  void XPT2046_to_240_320();
+User\XPT2046.h(31): warning:  #1-D: last line of file ends without a newline
+  #endif
+User\XPT2046.c(66): warning:  #177-D: variable "t" was declared but never referenced
+                u8 t,t1,count=0, i;
+User\XPT2046.c(66): warning:  #177-D: variable "t1" was declared but never referenced
+                u8 t,t1,count=0, i;
+User\XPT2046.c(68): warning:  #177-D: variable "temp" was declared but never referenced
+                u16 temp=0;     
+User\XPT2046.c(104): warning:  #1-D: last line of file ends without a newline
+  }
+User\XPT2046.c: 13 warnings, 0 errors
+compiling tm_stm32f4_ili9341.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\TM\tm_stm32f4_ili9341.c: 1 warning, 0 errors
+compiling tm_stm32f4_spi.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\TM\tm_stm32f4_spi.c: 1 warning, 0 errors
+compiling tm_stm32f4_gpio.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\TM\tm_stm32f4_gpio.c: 1 warning, 0 errors
+compiling tm_stm32f4_fonts.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\TM\tm_stm32f4_fonts.c: 1 warning, 0 errors
+compiling tm_stm32f4_delay.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\TM\tm_stm32f4_delay.c: 1 warning, 0 errors
+compiling tm_stm32f4_timer_properties.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\TM\tm_stm32f4_timer_properties.c: 1 warning, 0 errors
+compiling queue.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\FreeRTOSV8.2.1\FreeRTOS\Source\queue.c: 1 warning, 0 errors
+compiling tasks.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\FreeRTOSV8.2.1\FreeRTOS\Source\tasks.c: 1 warning, 0 errors
+compiling list.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\FreeRTOSV8.2.1\FreeRTOS\Source\list.c: 1 warning, 0 errors
+compiling heap_2.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\MemMang\heap_2.c: 1 warning, 0 errors
+compiling port.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\RVDS\ARM_CM4F\port.c: 1 warning, 0 errors
+compiling misc.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\src\misc.c: 1 warning, 0 errors
+compiling stm32f4xx_rcc.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c: 1 warning, 0 errors
+compiling stm32f4xx_gpio.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c: 1 warning, 0 errors
+compiling stm32f4xx_spi.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c: 1 warning, 0 errors
+compiling stm32f4xx_usart.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c: 1 warning, 0 errors
+compiling stm32f4xx_exti.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c: 1 warning, 0 errors
+compiling stm32f4xx_syscfg.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c: 1 warning, 0 errors
+compiling menu_system.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\Menu\menu_system.h(50): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Menu\menu_event.h(15): warning:  #1295-D: Deprecated declaration read_key - give arg types
+  char read_key();
+..\Menu\menu_event.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Menu\menu_system.c(149): warning:  #1-D: last line of file ends without a newline
+  }
+..\Menu\menu_system.c: 5 warnings, 0 errors
+compiling menu_functions.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\Menu\menu_system.h(50): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Menu\menu_functions.h(27): warning:  #1295-D: Deprecated declaration LED - give arg types
+  void LED();
+..\Menu\menu_functions.h(28): warning:  #1295-D: Deprecated declaration verzija - give arg types
+  void verzija();
+..\Menu\menu_functions.h(29): warning:  #1295-D: Deprecated declaration apocalypse - give arg types
+  void apocalypse();
+..\Menu\menu_functions.h(31): warning:  #1295-D: Deprecated declaration touch - give arg types
+  void touch();
+..\Menu\menu_functions.h(34): warning:  #1295-D: Deprecated declaration terminal - give arg types
+  void terminal();
+..\Menu\menu_functions.h(38): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\User\USART.h(8): warning:  #1295-D: Deprecated declaration USART1_IRQHandler - give arg types
+  void USART1_IRQHandler();
+..\Menu\menu_event.h(15): warning:  #1295-D: Deprecated declaration read_key - give arg types
+  char read_key();
+..\Menu\menu_event.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\User\XPT2046.h(22): warning:  #1295-D: Deprecated declaration XPT2046_Init - give arg types
+  void XPT2046_Init();
+.\User\XPT2046.h(24): warning:  #1295-D: Deprecated declaration XPT2046_read_x - give arg types
+  uint16_t XPT2046_read_x();
+.\User\XPT2046.h(25): warning:  #1295-D: Deprecated declaration XPT2046_read_y - give arg types
+  uint16_t XPT2046_read_y();
+.\User\XPT2046.h(26): warning:  #1295-D: Deprecated declaration XPT2046_read - give arg types
+  uint16_t XPT2046_read();
+.\User\XPT2046.h(27): warning:  #1295-D: Deprecated declaration XPT2046_pressed - give arg types
+  uint8_t XPT2046_pressed();
+.\User\XPT2046.h(28): warning:  #1295-D: Deprecated declaration XPT2046_round_read - give arg types
+  void XPT2046_round_read();
+.\User\XPT2046.h(29): warning:  #1295-D: Deprecated declaration XPT2046_to_240_320 - give arg types
+  void XPT2046_to_240_320();
+.\User\XPT2046.h(31): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Menu\menu_functions.c(164): warning:  #177-D: variable "i" was declared but never referenced
+        uint32_t i;
+..\Menu\menu_functions.c: 20 warnings, 0 errors
+compiling menu_event.c...
+..\Menu\menu_event.h(15): warning:  #1295-D: Deprecated declaration read_key - give arg types
+  char read_key();
+..\Menu\menu_event.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Menu\menu_event.c(32): warning:  #1-D: last line of file ends without a newline
+  }
+..\Menu\menu_event.c(32): warning:  #940-D: missing return statement at end of non-void function "read_key"
+  }
+..\Menu\menu_event.c: 4 warnings, 0 errors
+compiling stm32f4_discovery.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\STM32F4_Discovery\stm32f4_discovery.c: 1 warning, 0 errors
+linking...
+Program Size: Code=18350 RO-data=5858 RW-data=2308 ZI-data=37636  
+FromELF: creating hex file...
+".\Build\LCD_menu.axf" - 0 Error(s), 87 Warning(s).
+</pre>
+</body>
+</html>

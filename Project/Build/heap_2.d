@@ -1,0 +1,47 @@
+.\build\heap_2.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\MemMang\heap_2.c
+.\build\heap_2.o: D:\Program Files\Keil uVision 5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\build\heap_2.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\include\FreeRTOS.h
+.\build\heap_2.o: D:\Program Files\Keil uVision 5\ARM\ARMCC\Bin\..\include\stddef.h
+.\build\heap_2.o: D:\Program Files\Keil uVision 5\ARM\ARMCC\Bin\..\include\stdint.h
+.\build\heap_2.o: .\User\FreeRTOSConfig.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include\core_cm4.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include\core_cmInstr.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include\core_cmFunc.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include\core_cmSimd.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
+.\build\heap_2.o: .\User\stm32f4xx_conf.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_adc.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_crc.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dbgmcu.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dma.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_exti.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_flash.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_i2c.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_iwdg.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_pwr.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rtc.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_sdio.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_spi.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_syscfg.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_tim.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_usart.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\misc.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_cryp.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_hash.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rng.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
+.\build\heap_2.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
+.\build\heap_2.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\include\projdefs.h
+.\build\heap_2.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\include\portable.h
+.\build\heap_2.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\include\deprecated_definitions.h
+.\build\heap_2.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h
+.\build\heap_2.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\include\mpu_wrappers.h
+.\build\heap_2.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\include\task.h
+.\build\heap_2.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\include\list.h

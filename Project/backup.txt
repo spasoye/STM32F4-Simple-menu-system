@@ -1,0 +1,89 @@
+
+
+menu version_Info =
+		{
+			  "Version",
+		  	verzija,
+				0
+		};
+
+menu author_Info =
+		{
+			  "Ivan Spasic",
+		  	NULL,
+				0
+		};
+		
+menu motor_main_menu =
+    {
+        "1.Motor",
+        motor,
+        0
+    };
+menu Info_Main_Menu =
+    {
+        "6.Info",
+        NULL,
+        2,
+				{&version_Info, &author_Info},
+				1
+    };
+ 
+menu Calib_Main_Menu =
+    {
+        "5.Calib",
+        NULL,
+        0
+    };
+ 
+menu Move_Main_Menu =
+    {
+        "4.Movement",
+        NULL,
+        0
+    };
+ 
+menu Valve_Main_Menu =
+    {
+        "3.Valve",
+        NULL,
+        0
+    };
+ 
+menu Comm_Main_Menu =
+    {
+        "2.Comm",
+        NULL,
+        0
+    };
+ 
+menu Foo1_Main_Menu =
+    {
+        "Foo1",
+        NULL,
+        0
+    };
+
+menu Foo2_Main_Menu =
+    {
+        "Foo2",
+        NULL,
+        0
+    };
+
+menu Foo3_Main_Menu =
+    {
+        "Foo3",
+        NULL,
+        0
+    };
+		
+		
+menu main_menu =
+    {
+        "Main Menu",
+        NULL,
+        9,
+        {&motor_main_menu, &Comm_Main_Menu, &Valve_Main_Menu, &Move_Main_Menu, &Calib_Main_Menu, &Info_Main_Menu, &Foo1_Main_Menu, &Foo2_Main_Menu, &Foo3_Main_Menu},
+				1
+    };
