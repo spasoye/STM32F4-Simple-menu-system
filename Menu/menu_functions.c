@@ -160,18 +160,23 @@ void verzija(){
 }
 
 void touch(){
-	char pen_size;
+	char pen_size = 48;
 	uint16_t X, Y;
 	uint32_t i;
 	
 	menu_button button1;
-	while(button_pressed(button1)){
-	}
+	button1.X1 = 20;
+	button1.Y1 = 20;
+	button1.X2 = 100;
+	button1.Y2 = 100;
+
 	
 	TM_ILI9341_Fill(ILI9341_COLOR_BLACK);
-	TM_ILI9341_Puts(5, 5, "Color:", &PAINT_FONT, ILI9341_COLOR_WHITE, ILI9341_TRANSPARENT);
 //	TM_ILI9341_DrawRectangle(75, 5, );
 //	TM_ILI9341_Puts(5, 23, "Pen size:", &PAINT_FONT, ILI9341_COLOR_WHITE, ILI9341_TRANSPARENT);
+	TM_ILI9341_DrawFilledRectangle(button1.X1, button1.Y1, button1.X2, button1.Y2, ILI9341_COLOR_RED);
+	while(!button_pressed(button1));
+	TM_ILI9341_Puts(100, 100, "Tu sam", &PAINT_FONT, ILI9341_COLOR_WHITE, ILI9341_TRANSPARENT);
 	while(1){
 		if(menu_key_read == 0){
 			pen_size = read_key();
@@ -179,10 +184,11 @@ void touch(){
 				pen_size = '0';
 			}
 		}
-		
-		get_touch_coordinates(&X, &Y);
-		TM_ILI9341_DrawFilledCircle(X,Y,pen_size,ILI9341_COLOR_WHITE);
-		if(get_key(27)) return;
+		if(menu_touch_pressed){
+			get_touch_coordinates(&X, &Y);
+			TM_ILI9341_DrawFilledCircle(X,Y,pen_size-48,ILI9341_COLOR_WHITE);
+			if(get_key(27)) return;
+		}
 	}
 }
 

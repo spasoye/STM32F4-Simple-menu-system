@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Build\LCD_menu.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Build\LCD_menu.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Thu May 07 09:56:52 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Thu May 07 11:05:35 2015
 <BR><P>
 <H3>Maximum Stack Usage =       1472 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -906,7 +906,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawLine
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminal
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touch
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminal
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;apocalypse
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_menu
 </UL>
@@ -1891,10 +1892,11 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
 </UL>
-<P><STRONG><a name="[6]"></a>touch</STRONG> (Thumb, 352 bytes, Stack size 40 bytes, menu_functions.o(.text))
+<P><STRONG><a name="[6]"></a>touch</STRONG> (Thumb, 400 bytes, Stack size 40 bytes, menu_functions.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = touch &rArr; button_pressed &rArr; menu_get_touch_coordinates &rArr; get_touch_coordinates &rArr; XPT2046_to_240_320 &rArr; XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawFilledCircle
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawFilledRectangle
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_touch_coordinates
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_Puts
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_Fill

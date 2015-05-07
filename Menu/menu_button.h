@@ -12,6 +12,6 @@ typedef struct button{
 }menu_button;
 
 uint8_t button_pressed(menu_button button);
-
+//uint8_t button_draw();
 	
 #endif

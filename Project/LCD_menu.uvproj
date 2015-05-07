@@ -581,6 +581,11 @@
               <FileType>1</FileType>
               <FilePath>..\Menu\menu_button.c</FilePath>
             </File>
+            <File>
+              <FileName>menu_touch.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Menu\menu_touch.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
