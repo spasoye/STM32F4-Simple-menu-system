@@ -576,6 +576,11 @@
               <FileType>1</FileType>
               <FilePath>..\Menu\menu_event.c</FilePath>
             </File>
+            <File>
+              <FileName>menu_button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Menu\menu_button.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

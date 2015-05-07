@@ -1,9 +1,8 @@
 #ifndef MENU_BUTTON_H
 #define MENU_BUTTON_H
 
-#include "stdint.h"
-
-#define MAX_BUTTONS	100		//memory alocation should be used
+#include <stdint.h>
+#include "menu_touch.h"
 
 typedef struct button{
 	uint16_t X1;
@@ -12,7 +11,7 @@ typedef struct button{
 	uint16_t Y2;
 }menu_button;
 
-static menu_button button[MAX_BUTTONS];	
+uint8_t button_pressed(menu_button button);
 
 	
 #endif

@@ -49,3 +49,5 @@
 .\build\menu_functions.o: ..\TM\attributes.h
 .\build\menu_functions.o: ..\TM\tm_stm32f4_timer_properties.h
 .\build\menu_functions.o: .\User\XPT2046.h
+.\build\menu_functions.o: ..\Menu\menu_button.h
+.\build\menu_functions.o: ..\Menu\menu_touch.h

@@ -22,42 +22,38 @@ Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
 D:\STM32F4\Završni rad\Project\LCD_menu.uvproj
-Project File Date:  05/04/2015
+Project File Date:  05/05/2015
 
 <h2>Output:</h2>
 Build target 'Target 1'
-compiling XPT2046.c...
+compiling menu_touch.c...
 ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
     #define STM32F40_41xxx
-User\XPT2046.h(22): warning:  #1295-D: Deprecated declaration XPT2046_Init - give arg types
+.\User\XPT2046.h(22): warning:  #1295-D: Deprecated declaration XPT2046_Init - give arg types
   void XPT2046_Init();
-User\XPT2046.h(24): warning:  #1295-D: Deprecated declaration XPT2046_read_x - give arg types
+.\User\XPT2046.h(24): warning:  #1295-D: Deprecated declaration XPT2046_read_x - give arg types
   uint16_t XPT2046_read_x();
-User\XPT2046.h(25): warning:  #1295-D: Deprecated declaration XPT2046_read_y - give arg types
+.\User\XPT2046.h(25): warning:  #1295-D: Deprecated declaration XPT2046_read_y - give arg types
   uint16_t XPT2046_read_y();
-User\XPT2046.h(26): warning:  #1295-D: Deprecated declaration XPT2046_read - give arg types
+.\User\XPT2046.h(26): warning:  #1295-D: Deprecated declaration XPT2046_read - give arg types
   uint16_t XPT2046_read();
-User\XPT2046.h(27): warning:  #1295-D: Deprecated declaration XPT2046_pressed - give arg types
+.\User\XPT2046.h(27): warning:  #1295-D: Deprecated declaration XPT2046_pressed - give arg types
   uint8_t XPT2046_pressed();
-User\XPT2046.h(28): warning:  #1295-D: Deprecated declaration XPT2046_round_read - give arg types
+.\User\XPT2046.h(28): warning:  #1295-D: Deprecated declaration XPT2046_round_read - give arg types
   void XPT2046_round_read();
-User\XPT2046.h(29): warning:  #1295-D: Deprecated declaration XPT2046_to_240_320 - give arg types
+.\User\XPT2046.h(29): warning:  #1295-D: Deprecated declaration XPT2046_to_240_320 - give arg types
   void XPT2046_to_240_320();
-User\XPT2046.h(32): warning:  #1-D: last line of file ends without a newline
+.\User\XPT2046.h(32): warning:  #1-D: last line of file ends without a newline
   #endif
-User\XPT2046.c(68): warning:  #177-D: variable "t" was declared but never referenced
-                u8 t,t1,count=0, i;
-User\XPT2046.c(68): warning:  #177-D: variable "t1" was declared but never referenced
-                u8 t,t1,count=0, i;
-User\XPT2046.c(70): warning:  #177-D: variable "temp" was declared but never referenced
-                u16 temp=0;     
-User\XPT2046.c(113): warning:  #177-D: variable "number" was declared but never referenced
-                        char number[10],i;
-User\XPT2046.c: 13 warnings, 0 errors
+..\Menu\menu_touch.c(14): warning:  #1-D: last line of file ends without a newline
+  }
+..\Menu\menu_touch.c(14): warning:  #940-D: missing return statement at end of non-void function "menu_touch_pressed"
+  }
+..\Menu\menu_touch.c: 11 warnings, 0 errors
 linking...
-Program Size: Code=18374 RO-data=5858 RW-data=2304 ZI-data=37632  
+Program Size: Code=18462 RO-data=5858 RW-data=2304 ZI-data=37632  
 FromELF: creating hex file...
-".\Build\LCD_menu.axf" - 0 Error(s), 13 Warning(s).
+".\Build\LCD_menu.axf" - 0 Error(s), 11 Warning(s).
 </pre>
 </body>
 </html>

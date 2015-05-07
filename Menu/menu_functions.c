@@ -8,6 +8,7 @@
 #include "tm_stm32f4_timer_properties.h"	//	
 #include "tm_stm32f4_fonts.h"	//
 #include "XPT2046.h"	//
+#include "menu_button.h"
 
 #define TERMINAL_WIDTH 240
 #define TERMINAL_HEIGHT 320
@@ -162,6 +163,11 @@ void touch(){
 	char pen_size;
 	uint16_t X, Y;
 	uint32_t i;
+	
+	menu_button button1;
+	while(button_pressed(button1)){
+	}
+	
 	TM_ILI9341_Fill(ILI9341_COLOR_BLACK);
 	TM_ILI9341_Puts(5, 5, "Color:", &PAINT_FONT, ILI9341_COLOR_WHITE, ILI9341_TRANSPARENT);
 //	TM_ILI9341_DrawRectangle(75, 5, );
