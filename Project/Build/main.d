@@ -35,6 +35,7 @@
 .\build\main.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h
 .\build\main.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 .\build\main.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
+.\build\main.o: ..\STM32F4_Discovery\stm32f4_discovery.h
 .\build\main.o: User\defines.h
 .\build\main.o: ..\TM\tm_stm32f4_ili9341.h
 .\build\main.o: ..\TM\tm_stm32f4_spi.h
@@ -42,12 +43,14 @@
 .\build\main.o: ..\TM\tm_stm32f4_fonts.h
 .\build\main.o: ..\TM\tm_stm32f4_usart.h
 .\build\main.o: ..\TM\attributes.h
+.\build\main.o: ..\TM\tm_stm32f4_delay.h
+.\build\main.o: ..\TM\tm_stm32f4_timer_properties.h
 .\build\main.o: D:\Program Files\Keil uVision 5\ARM\ARMCC\Bin\..\include\stdio.h
 .\build\main.o: ..\Menu\menu_system.h
 .\build\main.o: ..\Menu\menu_functions.h
-.\build\main.o: ..\STM32F4_Discovery\stm32f4_discovery.h
-.\build\main.o: ..\TM\tm_stm32f4_delay.h
-.\build\main.o: ..\TM\tm_stm32f4_timer_properties.h
+.\build\main.o: ..\Menu\menu_touch.h
+.\build\main.o: ..\Menu\menu_button.h
+.\build\main.o: ..\Menu\menu_touch.h
 .\build\main.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\include\FreeRTOS.h
 .\build\main.o: D:\Program Files\Keil uVision 5\ARM\ARMCC\Bin\..\include\stddef.h
 .\build\main.o: .\User\FreeRTOSConfig.h

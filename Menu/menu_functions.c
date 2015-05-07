@@ -4,8 +4,8 @@
 #include "menu_event.h"
 #include "stm32f4_discovery.h"	//Demonstration purposes
 #include "tm_stm32f4_ili9341.h"	//Demonstration purposes
-#include "tm_stm32f4_delay.h"		//
-#include "tm_stm32f4_timer_properties.h"	//	
+#include "tm_stm32f4_delay.h"		////
+#include "tm_stm32f4_timer_properties.h"	////
 #include "tm_stm32f4_fonts.h"	//
 #include "XPT2046.h"	//
 #include "menu_button.h"
@@ -39,7 +39,9 @@ void LED(){
 	if(get_key('3')) STM_EVAL_LEDToggle(LED5);
 	if(get_key('4')) STM_EVAL_LEDToggle(LED6);
 	
-	if(get_key('a'))return;
+	if(get_key('a')){
+		TM_ILI9341_Fill(ILI9341_COLOR_WHITE);
+		return;}
 	}
 }
 

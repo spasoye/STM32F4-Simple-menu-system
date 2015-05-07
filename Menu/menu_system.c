@@ -13,6 +13,7 @@ void cycle_menu(menu* menu){
 	menu->token = 1;
 	/////////////////////
 	init_display(menu, &menu_display);
+	display_menu(&menu_display);
 	/////////////////////
 	}	
 	

@@ -2,17 +2,23 @@
 #define MAIN_H
 
 #include "stm32f4xx.h"
-#include "stm32f4xx_spi.h"
+//#include "stm32f4xx_spi.h"
+#include "stm32f4_discovery.h"
+
 #include "defines.h"
 #include "tm_stm32f4_ili9341.h"
 #include "tm_stm32f4_fonts.h"
 #include "tm_stm32f4_usart.h"
-#include <stdio.h>
-#include "menu_system.h"
-#include "menu_functions.h"
-#include "stm32f4_discovery.h"
 #include "tm_stm32f4_delay.h"	
 #include "tm_stm32f4_timer_properties.h"	
+#include <stdio.h>
+
+#include "menu_system.h"
+#include "menu_functions.h"
+#include "menu_touch.h"
+#include "menu_button.h"
+
+
 
 //FreeRTOS includes
 #include "FreeRTOS.h"

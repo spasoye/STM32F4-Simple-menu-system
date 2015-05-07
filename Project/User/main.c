@@ -2,6 +2,7 @@
 #include "USART.h"
 #include "XPT2046.h"
 
+////////////////////////////////////////////////////
 void RTOS_test(){
 	while(1){
 		vTaskDelay(100);
@@ -9,20 +10,23 @@ void RTOS_test(){
 		
 	}
 }
+////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////
 void menu_task(){
+	menu_touch_init();
 	while(1){
 		cycle_menu(&main_menu);
 	}
 }
-
+////////////////////////////////////////////////////
 int main(void) {
 
     //Initialize ILI9341
     TM_ILI9341_Init();
 		
 		//Initialize ILI9341
-		XPT2046_Init(); 
+		//XPT2046_Init(); 
 		
 		////////////////////////////
 		USART1_Init();

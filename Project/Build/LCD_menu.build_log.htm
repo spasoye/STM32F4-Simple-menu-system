@@ -29,8 +29,6 @@ Build target 'Target 1'
 compiling menu_functions.c...
 ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
     #define STM32F40_41xxx
-..\Menu\menu_system.h(49): warning:  #1295-D: Deprecated declaration define_buttons - give arg types
-  void define_buttons(); //defines buttons on some parts of display surface, max 100 buttons- defined in menu_button.h
 ..\Menu\menu_system.h(51): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\Menu\menu_functions.h(27): warning:  #1295-D: Deprecated declaration LED - give arg types
@@ -75,15 +73,15 @@ compiling menu_functions.c...
   uint8_t menu_touch_pressed();
 ..\Menu\menu_button.h(17): warning:  #1-D: last line of file ends without a newline
   #endif
-..\Menu\menu_functions.c(187): warning:  #236-D: controlling expression is constant
+..\Menu\menu_functions.c(189): warning:  #236-D: controlling expression is constant
                 if(menu_touch_pressed){
-..\Menu\menu_functions.c(165): warning:  #177-D: variable "i" was declared but never referenced
+..\Menu\menu_functions.c(167): warning:  #177-D: variable "i" was declared but never referenced
         uint32_t i;
-..\Menu\menu_functions.c: 26 warnings, 0 errors
+..\Menu\menu_functions.c: 25 warnings, 0 errors
 linking...
-Program Size: Code=18510 RO-data=5858 RW-data=2304 ZI-data=37632  
+Program Size: Code=18530 RO-data=5858 RW-data=2304 ZI-data=37632  
 FromELF: creating hex file...
-".\Build\LCD_menu.axf" - 0 Error(s), 26 Warning(s).
+".\Build\LCD_menu.axf" - 0 Error(s), 25 Warning(s).
 </pre>
 </body>
 </html>
