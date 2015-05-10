@@ -871,8 +871,8 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=.\build\startup_stm32f40xx.d -o.\build\startup_stm32f40xx.o -I"
 D:\Program Files\Keil uVision 5\ARM\RV31\INC" -I"D:\Program Files\Keil uVision 
 5\ARM\CMSIS\Include" -I"D:\Program Files\Keil uVision 5\ARM\Inc\ST\STM32F4xx" -
--predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 514" --list=.\st
-artup_stm32f40xx.lst startup_stm32f40xx.s
+-predefine="__UVISION_VERSION SETA 514" --list=.\startup_stm32f40xx.lst startup
+_stm32f40xx.s
 
 
 
@@ -1985,4 +1985,4 @@ Symbol: __use_two_region_memory
       None
 Comment: __use_two_region_memory unused
 3 symbols
-448 symbols in table
+447 symbols in table

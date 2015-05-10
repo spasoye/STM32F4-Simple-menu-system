@@ -39,7 +39,7 @@ void LED(){
 	if(get_key('3')) STM_EVAL_LEDToggle(LED5);
 	if(get_key('4')) STM_EVAL_LEDToggle(LED6);
 	
-	if(get_key('a')){
+	if(get_key(27)){
 		TM_ILI9341_Fill(ILI9341_COLOR_WHITE);
 		return;}
 	}
@@ -65,7 +65,7 @@ void apocalypse(){
 	TM_ILI9341_Fill(ILI9341_COLOR_BLACK);
 	TM_ILI9341_Puts(75, 120, "Apocalypse completed", &TM_Font_7x10, ILI9341_COLOR_WHITE, ILI9341_TRANSPARENT);
 	while(1){
-		if(get_key('a'))return;
+		if(get_key(27))return;
 	}
 }
 

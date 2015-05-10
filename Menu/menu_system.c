@@ -3,7 +3,7 @@
 #include "menu_event.h"
 
 char refresh_flag = 0;
-char blanks[21] = "                     ";
+char blanks[21] = "                    ";
 
 
 void cycle_menu(menu* menu){
