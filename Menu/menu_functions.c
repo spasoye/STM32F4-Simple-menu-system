@@ -7,8 +7,9 @@
 #include "tm_stm32f4_delay.h"		////
 #include "tm_stm32f4_timer_properties.h"	////
 #include "tm_stm32f4_fonts.h"	//
-#include "XPT2046.h"	//
+#include "XPT2046.h"
 #include "menu_button.h"
+#include "menu_display.h"
 
 #define TERMINAL_WIDTH 240
 #define TERMINAL_HEIGHT 320
@@ -165,21 +166,44 @@ void touch(){
 	char pen_size = 48;
 	uint16_t X, Y;
 	uint32_t i;
+	uint32_t color = BLACK;
 	
 	menu_button button1;
+	menu_button button2;
+	menu_slider slider1;
 	button1.X1 = 20;
 	button1.Y1 = 20;
-	button1.X2 = 100;
-	button1.Y2 = 100;
-
+	button1.X2 = 40;
+	button1.Y2 = 40;
+	button1.fill_color = GREEN;
+	button1.line_color = BLACK;
 	
-	TM_ILI9341_Fill(ILI9341_COLOR_BLACK);
-//	TM_ILI9341_DrawRectangle(75, 5, );
-//	TM_ILI9341_Puts(5, 23, "Pen size:", &PAINT_FONT, ILI9341_COLOR_WHITE, ILI9341_TRANSPARENT);
-	TM_ILI9341_DrawFilledRectangle(button1.X1, button1.Y1, button1.X2, button1.Y2, ILI9341_COLOR_RED);
-	while(!button_pressed(button1));
-	TM_ILI9341_Puts(100, 100, "Tu sam", &PAINT_FONT, ILI9341_COLOR_WHITE, ILI9341_TRANSPARENT);
+	button2.X1 = 50;
+	button2.Y1 = 20;
+	button2.X2 = 70;
+	button2.Y2 = 40;
+	
+	slider1.X1 = 80;
+	slider1.Y1 = 20;
+	slider1.value = 50;
+	slider1.length = 100;
+	button2.fill_color = RED;
+	button2.line_color = BLACK;
+	
+	TM_ILI9341_Fill(ILI9341_COLOR_WHITE);
+	menu_draw_button(&button1);
+	menu_draw_button(&button2);
+	menu_draw_slider(&slider1);
 	while(1){
+		if(button_pressed(&button1)){
+			color = GREEN;
+		}
+		if(button_pressed(&button2)){
+			color = RED;
+		}
+		if(slider_pressed(&slider1)){
+			
+		}
 		if(menu_key_read == 0){
 			pen_size = read_key();
 			if(pen_size < '0' && pen_size > '9'){
@@ -188,7 +212,7 @@ void touch(){
 		}
 		if(menu_touch_pressed){
 			get_touch_coordinates(&X, &Y);
-			TM_ILI9341_DrawFilledCircle(X,Y,pen_size-48,ILI9341_COLOR_WHITE);
+			menu_display_draw_filled_circle(X,Y,pen_size-48,color);
 			if(get_key(27)) return;
 		}
 	}

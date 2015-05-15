@@ -1,6 +1,8 @@
 #include "menu_system.h"
-#include "tm_stm32f4_ili9341.h"	//
+#include "menu_display.h"
 #include "menu_event.h"
+
+
 
 char refresh_flag = 0;
 char blanks[21] = "                    ";
@@ -82,30 +84,30 @@ void cycle_menu(menu* menu){
 void display_menu(display* menu_display){
 	uint8_t i;
 	if(menu_display->screen_refresh){
-		TM_ILI9341_Fill(ILI9341_COLOR_WHITE);
+		menu_display_fill(WHITE);
 		menu_display->screen_refresh = 0;
 	}
 	if(menu_display->title_refresh){
-		TM_ILI9341_DrawFilledRectangle(0, 0, MENU_WIDTH, 40, ILI9341_COLOR_WHITE);
-		TM_ILI9341_Puts(5, 10, blanks, &MENU_FONT, ILI9341_COLOR_BLACK, ILI9341_COLOR_WHITE);
-		TM_ILI9341_Puts(5, 10, menu_display->title, &MENU_FONT, ILI9341_COLOR_BLACK, ILI9341_COLOR_WHITE);
-		TM_ILI9341_DrawLine(0, 39, MENU_WIDTH, 39, ILI9341_COLOR_BLACK);
-		TM_ILI9341_DrawLine(0, 40, MENU_WIDTH, 40, ILI9341_COLOR_BLACK);
+		menu_display_draw_filled_rectangle(0, 0, MENU_WIDTH, 40,	WHITE);
+		menu_display_puts(5, 10, blanks, &TM_Font_11x18, BLACK, WHITE);
+		menu_display_puts(5, 10, menu_display->title, &MENU_FONT, BLACK, WHITE);
+		menu_display_draw_line(0, 39, MENU_WIDTH, 39, BLACK);
+		menu_display_draw_line(0, 40, MENU_WIDTH, 40, BLACK);
 		menu_display->title_refresh = 0;
 	}
 	if(menu_display->option_refresh){
 		for(i = menu_display->first;i <= menu_display->last;i++){
-			TM_ILI9341_Puts(5, 10+((i-menu_display->first+1)*40), blanks, &MENU_FONT, ILI9341_COLOR_BLACK, ILI9341_COLOR_WHITE);
+			menu_display_puts(5, 10+((i-menu_display->first+1)*40), blanks, &MENU_FONT, BLACK, WHITE);
 //			if(menu_display->selected == i)TM_ILI9341_Puts(5, 10+((i-menu_display->first+1)*40), menu_display->option[i-1], &MENU_FONT, ILI9341_COLOR_WHITE, ILI9341_COLOR_BLACK);
-			TM_ILI9341_Puts(5, 10+((i-menu_display->first+1)*40), menu_display->option[i-1], &MENU_FONT, ILI9341_COLOR_BLACK, ILI9341_COLOR_WHITE);
+			menu_display_puts(5, 10+((i-menu_display->first+1)*40), menu_display->option[i-1], &MENU_FONT, BLACK, WHITE);
 		}
 		menu_display->option_refresh = 0;
 	}
 	if(menu_display->refresh ){
 		//TM_ILI9341_Puts(5, 10+((menu_display->previous-menu_display->first+1)*40), blanks, &MENU_FONT, ILI9341_COLOR_BLACK, ILI9341_COLOR_WHITE);
-		TM_ILI9341_Puts(5, 10+((menu_display->previous-menu_display->first+1)*40), menu_display->option[menu_display->previous-1], &MENU_FONT, ILI9341_COLOR_BLACK, ILI9341_COLOR_WHITE);
+		menu_display_puts(5, 10+((menu_display->previous-menu_display->first+1)*40), menu_display->option[menu_display->previous-1], &MENU_FONT, BLACK, WHITE);
 		//TM_ILI9341_Puts(5, 10+((menu_display->selected-menu_display->first+1)*40), blanks, &MENU_FONT, ILI9341_COLOR_WHITE, ILI9341_COLOR_BLACK);
-		TM_ILI9341_Puts(5, 10+((menu_display->selected-menu_display->first+1)*40), menu_display->option[menu_display->selected-1], &MENU_FONT, ILI9341_COLOR_WHITE, ILI9341_COLOR_BLACK);
+		menu_display_puts(5, 10+((menu_display->selected-menu_display->first+1)*40), menu_display->option[menu_display->selected-1], &MENU_FONT, WHITE, BLACK);
 		menu_display->refresh = 0;
 	}
 }

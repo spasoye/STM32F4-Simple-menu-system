@@ -37,7 +37,5 @@
 .\build\menu_system.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 .\build\menu_system.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
 .\build\menu_system.o: .\User\defines.h
-.\build\menu_system.o: ..\TM\tm_stm32f4_ili9341.h
-.\build\menu_system.o: ..\TM\tm_stm32f4_spi.h
-.\build\menu_system.o: ..\TM\tm_stm32f4_gpio.h
+.\build\menu_system.o: ..\Menu\menu_display.h
 .\build\menu_system.o: ..\Menu\menu_event.h

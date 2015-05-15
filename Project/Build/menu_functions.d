@@ -51,3 +51,4 @@
 .\build\menu_functions.o: .\User\XPT2046.h
 .\build\menu_functions.o: ..\Menu\menu_button.h
 .\build\menu_functions.o: ..\Menu\menu_touch.h
+.\build\menu_functions.o: ..\Menu\menu_display.h
