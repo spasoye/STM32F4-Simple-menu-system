@@ -22,11 +22,24 @@ Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
 D:\STM32F4\Završni rad\Project\LCD_menu.uvproj
-Project File Date:  05/07/2015
+Project File Date:  05/10/2015
 
 <h2>Output:</h2>
 Build target 'Target 1'
-".\Build\LCD_menu.axf" - 0 Error(s), 0 Warning(s).
+compiling menu_display.c...
+..\Menu\menu_display.h(11): warning:  #1295-D: Deprecated declaration menu_display_init - give arg types
+  void menu_display_init();
+..\Menu\menu_display.h(18): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\Menu\menu_display.c(36): warning:  #1-D: last line of file ends without a newline
+  //}
+..\Menu\menu_display.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=18530 RO-data=5858 RW-data=2200 ZI-data=37632  
+FromELF: creating hex file...
+".\Build\LCD_menu.axf" - 0 Error(s), 4 Warning(s).
 </pre>
 </body>
 </html>

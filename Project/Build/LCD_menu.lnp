@@ -28,6 +28,7 @@
 ".\build\menu_event.o"
 ".\build\menu_button.o"
 ".\build\menu_touch.o"
+".\build\menu_display.o"
 ".\build\stm32f4_discovery.o"
 --strict --scatter ".\Build\LCD_menu.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols

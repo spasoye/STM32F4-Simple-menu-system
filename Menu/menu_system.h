@@ -20,10 +20,6 @@ typedef struct menu{
 		char first;			//
 		char last;
 		char prev_token;
-		uint16_t touchx1;
-		uint16_t touchx2;
-		uint16_t touchy1;
-		uint16_t touchy2;
 } menu;
 
 typedef struct display{
