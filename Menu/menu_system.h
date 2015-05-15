@@ -6,8 +6,8 @@
 #define TITLE_MAX	20
 #define	SUBMENU_MAX 30
 
-#define MENU_WIDTH	240
-#define MENU_HEIGHT 320
+#define MENU_WIDTH	240	//
+#define MENU_HEIGHT 320	//
 #define MENU_FONT TM_Font_11x18
 
 
@@ -33,6 +33,7 @@ typedef struct display{
 		char option_refresh;
 		char title_refresh;
 		char refresh;
+
 } display;
 
 extern char refresh_flag;

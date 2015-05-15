@@ -39,3 +39,5 @@
 .\build\menu_system.o: .\User\defines.h
 .\build\menu_system.o: ..\Menu\menu_display.h
 .\build\menu_system.o: ..\Menu\menu_event.h
+.\build\menu_system.o: ..\Menu\menu_button.h
+.\build\menu_system.o: ..\Menu\menu_touch.h

@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\Build\LCD_menu.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Build\LCD_menu.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Fri May 15 16:37:13 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Fri May 15 20:56:51 2015
 <BR><P>
-<H3>Maximum Stack Usage =       1496 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =       1624 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 menu_task &rArr; cycle_menu &rArr;  cycle_menu (Cycle)
 <P>
@@ -225,8 +225,8 @@ Global Symbols
 <P><STRONG><a name="[13d]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000B))
 
 <P><STRONG><a name="[69]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 </UL>
 
 <P><STRONG><a name="[13e]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
@@ -560,7 +560,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
 </UL>
 <P><STRONG><a name="[7d]"></a>menu_task</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 1496<LI>Call Chain = menu_task &rArr; cycle_menu &rArr;  cycle_menu (Cycle)
+<BR><BR>[Stack]<UL><LI>Max Depth = 1624<LI>Call Chain = menu_task &rArr; cycle_menu &rArr;  cycle_menu (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_touch_init
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cycle_menu
@@ -722,9 +722,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = XPT2046_to_240_320 &rArr; XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;XPT2046_round_read
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_touch_coordinates
 </UL>
@@ -846,7 +846,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_Putc
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawCircle
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_display_draw_pixel
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminal_putc
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminal_putc
 </UL>
 
 <P><STRONG><a name="[ac]"></a>TM_ILI9341_Rotate</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, tm_stm32f4_ili9341.o(.text), UNUSED)
@@ -1515,7 +1515,7 @@ Global Symbols
 <P><STRONG><a name="[88]"></a>RCC_AHB1PeriphClockCmd</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_Init
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_PBInit
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDInit
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDInit
 </UL>
 
 <P><STRONG><a name="[171]"></a>RCC_AHB2PeriphClockCmd</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(.text), UNUSED)
@@ -1579,7 +1579,7 @@ Global Symbols
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_GPIO_Init
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_Init
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_PBInit
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDInit
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDInit
 </UL>
 
 <P><STRONG><a name="[180]"></a>GPIO_StructInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(.text), UNUSED)
@@ -1822,12 +1822,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cycle_menu
 </UL>
 
-<P><STRONG><a name="[7f]"></a>cycle_menu</STRONG> (Thumb, 250 bytes, Stack size 1312 bytes, menu_system.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 1496 + In Cycle
+<P><STRONG><a name="[7f]"></a>cycle_menu</STRONG> (Thumb, 364 bytes, Stack size 1432 bytes, menu_system.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 1624 + In Cycle
 <LI>Call Chain = cycle_menu &rArr;  cycle_menu (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cycle_menu
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_key
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_pressed
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_display
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_display
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_menu
@@ -1842,8 +1843,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_puts
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_Puts
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_Fill
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDToggle
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDInit
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDToggle
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STM_EVAL_LEDInit
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_key
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
@@ -1859,7 +1860,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
 </UL>
-<P><STRONG><a name="[106]"></a>terminal_putc</STRONG> (Thumb, 106 bytes, Stack size 40 bytes, menu_functions.o(.text))
+<P><STRONG><a name="[107]"></a>terminal_putc</STRONG> (Thumb, 106 bytes, Stack size 40 bytes, menu_functions.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = terminal_putc &rArr; TM_ILI9341_DrawPixel &rArr; TM_ILI9341_SetCursorPosition &rArr; TM_ILI9341_SendCommand
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawPixel
@@ -1875,8 +1876,8 @@ Global Symbols
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_puts
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_Puts
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_Fill
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_key
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminal_putc
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_key
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminal_putc
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_key
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
@@ -1894,12 +1895,12 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_touch_coordinates
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_Fill
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slider_pressed
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_key
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_button
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;read_key
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_button
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_display_draw_filled_circle
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_pressed
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_key
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_pressed
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.data)
 </UL>
@@ -1915,21 +1916,22 @@ Global Symbols
 <LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED
 </UL>
 
-<P><STRONG><a name="[107]"></a>read_key</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, menu_event.o(.text))
+<P><STRONG><a name="[108]"></a>read_key</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, menu_event.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touch
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;terminal
 </UL>
 
-<P><STRONG><a name="[10a]"></a>button_pressed</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, menu_button.o(.text))
+<P><STRONG><a name="[104]"></a>button_pressed</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, menu_button.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = button_pressed &rArr; menu_get_touch_coordinates &rArr; get_touch_coordinates &rArr; XPT2046_to_240_320 &rArr; XPT2046_round_read &rArr; XPT2046_read &rArr; XPT2046_read_y &rArr; XPT2046_GetCoordinates &rArr; TM_SPI_ReadMulti
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_touch_pressed
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_get_touch_coordinates
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touch
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cycle_menu
 </UL>
 
-<P><STRONG><a name="[108]"></a>menu_draw_button</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, menu_button.o(.text))
+<P><STRONG><a name="[109]"></a>menu_draw_button</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, menu_button.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = menu_draw_button &rArr; menu_display_draw_rectangle &rArr; TM_ILI9341_DrawRectangle &rArr; TM_ILI9341_DrawLine &rArr; TM_ILI9341_DrawPixel &rArr; TM_ILI9341_SetCursorPosition &rArr; TM_ILI9341_SendCommand
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_display_draw_rectangle
@@ -1938,7 +1940,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touch
 </UL>
 
-<P><STRONG><a name="[109]"></a>menu_draw_slider</STRONG> (Thumb, 220 bytes, Stack size 16 bytes, menu_button.o(.text))
+<P><STRONG><a name="[10a]"></a>menu_draw_slider</STRONG> (Thumb, 220 bytes, Stack size 16 bytes, menu_button.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = menu_draw_slider &rArr; menu_display_draw_filled_circle &rArr; TM_ILI9341_DrawFilledCircle &rArr; TM_ILI9341_DrawLine &rArr; TM_ILI9341_DrawPixel &rArr; TM_ILI9341_SetCursorPosition &rArr; TM_ILI9341_SendCommand
 </UL>
 <BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_display_draw_circle
@@ -1955,7 +1957,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_touch_pressed
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_get_touch_coordinates
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touch
 </UL>
@@ -1974,14 +1976,14 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_touch_coordinates
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slider_pressed
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_pressed
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_pressed
 </UL>
 
 <P><STRONG><a name="[10d]"></a>menu_touch_pressed</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, menu_touch.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;XPT2046_pressed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slider_pressed
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_pressed
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;button_pressed
 </UL>
 
 <P><STRONG><a name="[112]"></a>menu_display_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, menu_display.o(.text), UNUSED)
@@ -1997,7 +1999,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawRectangle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_button
+<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_button
 </UL>
 
 <P><STRONG><a name="[fe]"></a>menu_display_draw_filled_rectangle</STRONG> (Thumb, 12 bytes, Stack size 16 bytes, menu_display.o(.text))
@@ -2005,8 +2007,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawFilledRectangle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
-<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_button
+<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_button
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_menu
 </UL>
 
@@ -2015,7 +2017,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawCircle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
+<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
 </UL>
 
 <P><STRONG><a name="[10c]"></a>menu_display_draw_filled_circle</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, menu_display.o(.text))
@@ -2024,7 +2026,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawFilledCircle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touch
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
 </UL>
 
 <P><STRONG><a name="[100]"></a>menu_display_draw_line</STRONG> (Thumb, 12 bytes, Stack size 16 bytes, menu_display.o(.text))
@@ -2032,7 +2034,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ILI9341_DrawLine
 </UL>
-<BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
+<BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_slider
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_menu
 </UL>
 
@@ -2052,7 +2054,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_menu
 </UL>
 
-<P><STRONG><a name="[104]"></a>STM_EVAL_LEDInit</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, stm32f4_discovery.o(.text))
+<P><STRONG><a name="[105]"></a>STM_EVAL_LEDInit</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, stm32f4_discovery.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = STM_EVAL_LEDInit &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
@@ -2065,7 +2067,7 @@ Global Symbols
 
 <P><STRONG><a name="[1c6]"></a>STM_EVAL_LEDOff</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4_discovery.o(.text), UNUSED)
 
-<P><STRONG><a name="[105]"></a>STM_EVAL_LEDToggle</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f4_discovery.o(.text))
+<P><STRONG><a name="[106]"></a>STM_EVAL_LEDToggle</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f4_discovery.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED
 </UL>
 
@@ -2150,8 +2152,8 @@ Global Symbols
 <P><STRONG><a name="[1cf]"></a>_dflt</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, dflt_clz.o(x$fpl$dflt), UNUSED)
 
 <P><STRONG><a name="[11d]"></a>__fpl_dnaninf</STRONG> (Thumb, 156 bytes, Stack size 16 bytes, dnaninf.o(x$fpl$dnaninf), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dfixu
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ddiv
+<BR><BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ddiv
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_dfixu
 </UL>
 
 <P><STRONG><a name="[11c]"></a>__fpl_dretinf</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, dretinf.o(x$fpl$dretinf), UNUSED)

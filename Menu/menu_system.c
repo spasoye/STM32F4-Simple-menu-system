@@ -1,6 +1,7 @@
 #include "menu_system.h"
 #include "menu_display.h"
 #include "menu_event.h"
+#include "menu_button.h"
 
 
 
@@ -9,8 +10,19 @@ char blanks[21] = "                    ";
 
 
 void cycle_menu(menu* menu){
+	menu_button button[(MENU_HEIGHT/40) - 1];
+	char i;
+	
 	struct menu* next_menu = menu->submenu[0];  //why struct
 	display menu_display;
+	
+	for(i=0;i<(MENU_HEIGHT/40-1);i++){
+		button[i].X1 = 0;
+		button[i].Y1 = 40 + (i*40);
+		button[i].X2 = MENU_WIDTH;
+		button[i].Y2 = 80 + (i*40);	
+	}
+	
 	if(menu->submenus != 0){
 	menu->token = 1;
 	/////////////////////
@@ -68,13 +80,23 @@ void cycle_menu(menu* menu){
 				return;
 			}
 			
-			if( get_key('d') ){
+			if(get_key('d')){
 				menu_display.screen_refresh = 1;
 				menu_display.option_refresh = 1;
 				menu_display.title_refresh = 1;
 				menu_display.refresh = 1;
 				cycle_menu(next_menu);
 
+			}
+			
+			for(i=0;i<(MENU_HEIGHT/40-1);i++){
+				if(button_pressed(&button[i])){
+					menu_display.screen_refresh = 1;
+					menu_display.option_refresh = 1;
+					menu_display.title_refresh = 1;
+					menu_display.refresh = 1;
+					cycle_menu(menu->submenu[i+menu_display.first-1]);
+				}
 			}
 		}
 	}
@@ -98,6 +120,7 @@ void display_menu(display* menu_display){
 	if(menu_display->option_refresh){
 		for(i = menu_display->first;i <= menu_display->last;i++){
 			menu_display_puts(5, 10+((i-menu_display->first+1)*40), blanks, &MENU_FONT, BLACK, WHITE);
+				
 //			if(menu_display->selected == i)TM_ILI9341_Puts(5, 10+((i-menu_display->first+1)*40), menu_display->option[i-1], &MENU_FONT, ILI9341_COLOR_WHITE, ILI9341_COLOR_BLACK);
 			menu_display_puts(5, 10+((i-menu_display->first+1)*40), menu_display->option[i-1], &MENU_FONT, BLACK, WHITE);
 		}

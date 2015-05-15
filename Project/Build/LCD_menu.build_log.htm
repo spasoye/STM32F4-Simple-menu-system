@@ -26,7 +26,19 @@ Project File Date:  05/10/2015
 
 <h2>Output:</h2>
 Build target 'Target 1'
-compiling menu_button.c...
+compiling menu_system.c...
+..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
+    #define STM32F40_41xxx
+..\Menu\menu_system.h(48): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Menu\menu_display.h(32): warning:  #1295-D: Deprecated declaration menu_display_init - give arg types
+  void menu_display_init();
+..\Menu\menu_display.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Menu\menu_event.h(15): warning:  #1295-D: Deprecated declaration read_key - give arg types
+  char read_key();
+..\Menu\menu_event.h(16): warning:  #1-D: last line of file ends without a newline
+  #endif
 ..\Menu\menu_touch.h(3): warning:  #1295-D: Deprecated declaration menu_touch_init - give arg types
   void menu_touch_init();
 ..\Menu\menu_touch.h(5): warning:  #1-D: last line of file ends without a newline
@@ -35,19 +47,13 @@ compiling menu_button.c...
   uint8_t menu_touch_pressed();
 ..\Menu\menu_button.h(29): warning:  #1-D: last line of file ends without a newline
   #endif
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\Menu\menu_display.h(32): warning:  #1295-D: Deprecated declaration menu_display_init - give arg types
-  void menu_display_init();
-..\Menu\menu_display.h(41): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_button.c(48): warning:  #1-D: last line of file ends without a newline
+..\Menu\menu_system.c(175): warning:  #1-D: last line of file ends without a newline
   }
-..\Menu\menu_button.c: 8 warnings, 0 errors
+..\Menu\menu_system.c: 11 warnings, 0 errors
 linking...
-Program Size: Code=19030 RO-data=5858 RW-data=2200 ZI-data=37632  
+Program Size: Code=19142 RO-data=5858 RW-data=2200 ZI-data=37632  
 FromELF: creating hex file...
-".\Build\LCD_menu.axf" - 0 Error(s), 8 Warning(s).
+".\Build\LCD_menu.axf" - 0 Error(s), 11 Warning(s).
 </pre>
 </body>
 </html>
