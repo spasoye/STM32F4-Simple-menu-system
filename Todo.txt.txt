@@ -1,5 +1,10 @@
 wrapper functions upgrade - (for now they are just TM_ILI9341 functions)
-buttons
-sliders
 menu_fonts
 formated print - (function that wil automatically allign text)
+delay
+touch pressed interupt
+	-gestures: up, down, left, right
+	-simple press	
+
+-USB host
+	

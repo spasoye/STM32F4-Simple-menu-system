@@ -16,7 +16,7 @@ void cycle_menu(menu* menu){
 	struct menu* next_menu = menu->submenu[0];  //why struct
 	display menu_display;
 	
-	for(i=0;i<(MENU_HEIGHT/40-1);i++){
+	for(i=0;i<menu->submenus;i++){
 		button[i].X1 = 0;
 		button[i].Y1 = 40 + (i*40);
 		button[i].X2 = MENU_WIDTH;
@@ -89,7 +89,7 @@ void cycle_menu(menu* menu){
 
 			}
 			
-			for(i=0;i<(MENU_HEIGHT/40-1);i++){
+			for(i=0;i<menu->submenus;i++){
 				if(button_pressed(&button[i])){
 					menu_display.screen_refresh = 1;
 					menu_display.option_refresh = 1;
