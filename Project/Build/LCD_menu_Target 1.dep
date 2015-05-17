@@ -84,7 +84,7 @@ I (..\TM\tm_stm32f4_timer_properties.h)(0x5477AE60)
 I (D:\Program Files\Keil uVision 5\ARM\ARMCC\include\stdio.h)(0x54765570)
 I (..\Menu\menu_system.h)(0x55563F5E)
 I (..\Menu\menu_functions.h)(0x552ABD72)
-I (..\Menu\menu_touch.h)(0x554B0EAC)
+I (..\Menu\menu_touch.h)(0x5558692A)
 I (..\Menu\menu_button.h)(0x55560247)
 I (..\FreeRTOSV8.2.1\FreeRTOS\Source\include\FreeRTOS.h)(0x550DE850)
 I (D:\Program Files\Keil uVision 5\ARM\ARMCC\include\stddef.h)(0x54765570)
@@ -963,7 +963,7 @@ I (.\User\defines.h)(0x5532DE54)
 I (..\Menu\menu_display.h)(0x5555D3B9)
 I (..\Menu\menu_event.h)(0x55269042)
 I (..\Menu\menu_button.h)(0x55560247)
-I (..\Menu\menu_touch.h)(0x554B0EAC)
+I (..\Menu\menu_touch.h)(0x5558692A)
 F (..\Menu\menu_functions.c)(0x55560285)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc -I..\TM -I.\User -I..\FreeRTOSV8.2.1\FreeRTOS\Source\include -I..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\RVDS\ARM_CM4F -I..\Menu -I..\STM32F4_Discovery -I..\fat_fs\ff11\src-I "D:\Program Files\Keil uVision 5\ARM\RV31\INC"-I "D:\Program Files\Keil uVision 5\ARM\CMSIS\Include"-I "D:\Program Files\Keil uVision 5\ARM\Inc\ST\STM32F4xx"-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DKEIL_IDE -DTM_DISCO_STM32F4_DISCOVERY -DPLL_M="8" -DPLL_N="336" -DPLL_P="2" -DPLL_Q="7" -D__KEIL__ -DSTM32F40XX-o .\build\menu_functions.o --omf_browse .\build\menu_functions.crf --depend .\build\menu_functions.d)
 I (..\Menu\menu_functions.h)(0x552ABD72)
 I (..\Menu\menu_system.h)(0x55563F5E)
@@ -1015,14 +1015,14 @@ I (..\TM\attributes.h)(0x54F22A68)
 I (..\TM\tm_stm32f4_timer_properties.h)(0x5477AE60)
 I (.\User\XPT2046.h)(0x5548AF0A)
 I (..\Menu\menu_button.h)(0x55560247)
-I (..\Menu\menu_touch.h)(0x554B0EAC)
+I (..\Menu\menu_touch.h)(0x5558692A)
 I (..\Menu\menu_display.h)(0x5555D3B9)
 F (..\Menu\menu_event.c)(0x55269042)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc -I..\TM -I.\User -I..\FreeRTOSV8.2.1\FreeRTOS\Source\include -I..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\RVDS\ARM_CM4F -I..\Menu -I..\STM32F4_Discovery -I..\fat_fs\ff11\src-I "D:\Program Files\Keil uVision 5\ARM\RV31\INC"-I "D:\Program Files\Keil uVision 5\ARM\CMSIS\Include"-I "D:\Program Files\Keil uVision 5\ARM\Inc\ST\STM32F4xx"-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DKEIL_IDE -DTM_DISCO_STM32F4_DISCOVERY -DPLL_M="8" -DPLL_N="336" -DPLL_P="2" -DPLL_Q="7" -D__KEIL__ -DSTM32F40XX-o .\build\menu_event.o --omf_browse .\build\menu_event.crf --depend .\build\menu_event.d)
 I (..\Menu\menu_event.h)(0x55269042)
 F (..\Menu\menu_button.c)(0x55560497)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc -I..\TM -I.\User -I..\FreeRTOSV8.2.1\FreeRTOS\Source\include -I..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\RVDS\ARM_CM4F -I..\Menu -I..\STM32F4_Discovery -I..\fat_fs\ff11\src-I "D:\Program Files\Keil uVision 5\ARM\RV31\INC"-I "D:\Program Files\Keil uVision 5\ARM\CMSIS\Include"-I "D:\Program Files\Keil uVision 5\ARM\Inc\ST\STM32F4xx"-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DKEIL_IDE -DTM_DISCO_STM32F4_DISCOVERY -DPLL_M="8" -DPLL_N="336" -DPLL_P="2" -DPLL_Q="7" -D__KEIL__ -DSTM32F40XX-o .\build\menu_button.o --omf_browse .\build\menu_button.crf --depend .\build\menu_button.d)
 I (..\Menu\menu_button.h)(0x55560247)
 I (D:\Program Files\Keil uVision 5\ARM\ARMCC\include\stdint.h)(0x54765570)
-I (..\Menu\menu_touch.h)(0x554B0EAC)
+I (..\Menu\menu_touch.h)(0x5558692A)
 I (..\Menu\menu_display.h)(0x5555D3B9)
 I (..\TM\tm_stm32f4_fonts.h)(0x53FDF054)
 I (..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x55037EC2)
@@ -1059,7 +1059,7 @@ I (..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\st
 I (..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x54DDCDD4)
 I (..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x54DDCDD4)
 I (.\User\defines.h)(0x5532DE54)
-F (..\Menu\menu_touch.c)(0x554B1A85)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc -I..\TM -I.\User -I..\FreeRTOSV8.2.1\FreeRTOS\Source\include -I..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\RVDS\ARM_CM4F -I..\Menu -I..\STM32F4_Discovery -I..\fat_fs\ff11\src-I "D:\Program Files\Keil uVision 5\ARM\RV31\INC"-I "D:\Program Files\Keil uVision 5\ARM\CMSIS\Include"-I "D:\Program Files\Keil uVision 5\ARM\Inc\ST\STM32F4xx"-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DKEIL_IDE -DTM_DISCO_STM32F4_DISCOVERY -DPLL_M="8" -DPLL_N="336" -DPLL_P="2" -DPLL_Q="7" -D__KEIL__ -DSTM32F40XX-o .\build\menu_touch.o --omf_browse .\build\menu_touch.crf --depend .\build\menu_touch.d)
+F (..\Menu\menu_touch.c)(0x5558692A)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc -I..\TM -I.\User -I..\FreeRTOSV8.2.1\FreeRTOS\Source\include -I..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\RVDS\ARM_CM4F -I..\Menu -I..\STM32F4_Discovery -I..\fat_fs\ff11\src-I "D:\Program Files\Keil uVision 5\ARM\RV31\INC"-I "D:\Program Files\Keil uVision 5\ARM\CMSIS\Include"-I "D:\Program Files\Keil uVision 5\ARM\Inc\ST\STM32F4xx"-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DKEIL_IDE -DTM_DISCO_STM32F4_DISCOVERY -DPLL_M="8" -DPLL_N="336" -DPLL_P="2" -DPLL_Q="7" -D__KEIL__ -DSTM32F40XX-o .\build\menu_touch.o --omf_browse .\build\menu_touch.crf --depend .\build\menu_touch.d)
 I (.\User\XPT2046.h)(0x5548AF0A)
 I (.\User\defines.h)(0x5532DE54)
 I (..\TM\tm_stm32f4_spi.h)(0x55158952)
@@ -1098,6 +1098,8 @@ I (..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\st
 I (..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x54DDCDD4)
 I (..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x54DDCDD4)
 I (..\TM\tm_stm32f4_gpio.h)(0x55056A9E)
+I (..\Menu\menu_touch.h)(0x5558692A)
+I (D:\Program Files\Keil uVision 5\ARM\ARMCC\include\math.h)(0x5476556E)
 F (..\Menu\menu_display.c)(0x5555FEA6)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include -I..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc -I..\TM -I.\User -I..\FreeRTOSV8.2.1\FreeRTOS\Source\include -I..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\RVDS\ARM_CM4F -I..\Menu -I..\STM32F4_Discovery -I..\fat_fs\ff11\src-I "D:\Program Files\Keil uVision 5\ARM\RV31\INC"-I "D:\Program Files\Keil uVision 5\ARM\CMSIS\Include"-I "D:\Program Files\Keil uVision 5\ARM\Inc\ST\STM32F4xx"-D__UVISION_VERSION="514" -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DSTM32F4XX -DKEIL_IDE -DTM_DISCO_STM32F4_DISCOVERY -DPLL_M="8" -DPLL_N="336" -DPLL_P="2" -DPLL_Q="7" -D__KEIL__ -DSTM32F40XX-o .\build\menu_display.o --omf_browse .\build\menu_display.crf --depend .\build\menu_display.d)
 I (..\Menu\menu_display.h)(0x5555D3B9)
 I (D:\Program Files\Keil uVision 5\ARM\ARMCC\include\stdint.h)(0x54765570)

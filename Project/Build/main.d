@@ -50,7 +50,6 @@
 .\build\main.o: ..\Menu\menu_functions.h
 .\build\main.o: ..\Menu\menu_touch.h
 .\build\main.o: ..\Menu\menu_button.h
-.\build\main.o: ..\Menu\menu_touch.h
 .\build\main.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\include\FreeRTOS.h
 .\build\main.o: D:\Program Files\Keil uVision 5\ARM\ARMCC\Bin\..\include\stddef.h
 .\build\main.o: .\User\FreeRTOSConfig.h

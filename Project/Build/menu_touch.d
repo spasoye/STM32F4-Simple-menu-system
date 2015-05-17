@@ -38,3 +38,5 @@
 .\build\menu_touch.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h
 .\build\menu_touch.o: ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h
 .\build\menu_touch.o: ..\TM\tm_stm32f4_gpio.h
+.\build\menu_touch.o: ..\Menu\menu_touch.h
+.\build\menu_touch.o: D:\Program Files\Keil uVision 5\ARM\ARMCC\Bin\..\include\math.h

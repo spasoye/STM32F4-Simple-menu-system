@@ -2,6 +2,7 @@
 #include "menu_display.h"
 #include "menu_event.h"
 #include "menu_button.h"
+#include "menu_touch.h"
 
 
 
@@ -12,6 +13,7 @@ char blanks[21] = "                    ";
 void cycle_menu(menu* menu){
 	menu_button button[(MENU_HEIGHT/40) - 1];
 	char i;
+	touch_gesture move;
 	
 	struct menu* next_menu = menu->submenu[0];  //why struct
 	display menu_display;
@@ -46,7 +48,8 @@ void cycle_menu(menu* menu){
 		while(1){
 			update_display(menu, &menu_display);
 			display_menu(&menu_display);
-			if( get_key('s') ){	
+			move = menu_touch_gesture();
+			if( get_key('s') || move == TOUCH_DOWN ){	
 				menu_display.previous = menu->token;				
 				menu->token = menu->token + 1;
 				if ( menu->token > menu->submenus ){
@@ -59,7 +62,7 @@ void cycle_menu(menu* menu){
 				display_menu(&menu_display);			
 			}
 			
-			if( get_key('w') ){		
+			if( get_key('w')  ){		
 				menu_display.previous = menu->token;	
 				menu->token = menu->token - 1;
 				if ( menu->token < 1 ){
