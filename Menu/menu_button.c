@@ -13,6 +13,13 @@ uint8_t button_pressed(menu_button* button){
 	else return 0;
 }
 
+uint8_t check_button_pressed(menu_button* button, uint16_t x, uint16_t y){
+		if((x > button->X1)&&(x < button->X2) && (y > button->Y1)&&(y < button->Y2)){
+			return 1;
+		}
+		else return 0;
+}
+
 void menu_draw_button(menu_button* button){
 	menu_display_draw_filled_rectangle(button->X1, button->Y1, button->X2, button->Y2, button->fill_color);
 	menu_display_draw_rectangle(button->X1, button->Y1, button->X2, button->Y2, button->line_color);

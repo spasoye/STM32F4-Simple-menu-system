@@ -10,6 +10,7 @@
 #include "XPT2046.h"
 #include "menu_button.h"
 #include "menu_display.h"
+#include "menu_touch.h"
 
 #define TERMINAL_WIDTH 240
 #define TERMINAL_HEIGHT 320
@@ -165,8 +166,10 @@ void verzija(){
 void touch(){
 	char pen_size = 48;
 	uint16_t X, Y;
+	char X_string[5], Y_string[5];
 	uint32_t i;
 	uint32_t color = BLACK;
+	touch_gesture move;
 	
 	menu_button button1;
 	menu_button button2;
@@ -195,26 +198,48 @@ void touch(){
 	menu_draw_button(&button2);
 	menu_draw_slider(&slider1);
 	while(1){
-		if(button_pressed(&button1)){
-			color = GREEN;
+		move = menu_touch_gesture(&X, &Y);
+		if(move == TOUCH_UP){
+			menu_display_puts(20, 100, "UP     ", &TM_Font_11x18, BLACK, WHITE); 
 		}
-		if(button_pressed(&button2)){
-			color = RED;
+		if(move == TOUCH_DOWN){
+			menu_display_puts(20, 100, "DOWN ", &TM_Font_11x18, BLACK, WHITE); 
 		}
-		if(slider_pressed(&slider1)){
-			
+		if(move == TOUCH_LEFT){
+			menu_display_puts(20, 100, "LEFT ", &TM_Font_11x18, BLACK, WHITE); 
 		}
-		if(menu_key_read == 0){
-			pen_size = read_key();
-			if(pen_size < '0' && pen_size > '9'){
-				pen_size = '0';
-			}
+		if(move == TOUCH_RIGHT){
+			menu_display_puts(20, 100, "RIGHT", &TM_Font_11x18, BLACK, WHITE); 
 		}
-		if(menu_touch_pressed){
-			get_touch_coordinates(&X, &Y);
-			menu_display_draw_filled_circle(X,Y,pen_size-48,color);
+		if(move == TOUCH_CLICK){
+			menu_display_puts(20, 100, "CLICK  ", &TM_Font_11x18, BLACK, WHITE); 
+			uint16tostr(X_string, X, 10);
+			menu_display_puts(20, 120, "     ", &TM_Font_11x18, BLACK, WHITE); 
+			menu_display_puts(20, 120, X_string, &TM_Font_11x18, BLACK, WHITE);
+			uint16tostr(Y_string, Y, 10);
+			menu_display_puts(20, 140, "     ", &TM_Font_11x18, BLACK, WHITE); 
+			menu_display_puts(20, 140, Y_string, &TM_Font_11x18, BLACK, WHITE);
+		}
+//		if(button_pressed(&button1)){
+//			color = GREEN;
+//		}
+//		if(button_pressed(&button2)){
+//			color = RED;
+//		}
+//		if(slider_pressed(&slider1)){
+//			
+//		}
+//		if(menu_key_read == 0){
+//			pen_size = read_key();
+//			if(pen_size < '0' && pen_size > '9'){
+//				pen_size = '0';
+//			}
+//		}
+//		if(menu_touch_pressed){
+//			get_touch_coordinates(&X, &Y);
+//			menu_display_draw_filled_circle(X,Y,pen_size-48,color);}
 			if(get_key(27)) return;
-		}
+		
 	}
 }
 

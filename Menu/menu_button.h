@@ -26,4 +26,5 @@ uint8_t button_pressed(menu_button* button);
 void menu_draw_button(menu_button* button);
 void menu_draw_slider(menu_slider* slider);
 uint8_t slider_pressed(menu_slider* slider);
+uint8_t check_button_pressed(menu_button* button, uint16_t x, uint16_t y);
 #endif

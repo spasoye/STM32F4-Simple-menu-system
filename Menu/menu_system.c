@@ -13,6 +13,7 @@ char blanks[21] = "                    ";
 void cycle_menu(menu* menu){
 	menu_button button[(MENU_HEIGHT/40) - 1];
 	char i;
+	uint16_t x, y;
 	touch_gesture move;
 	
 	struct menu* next_menu = menu->submenu[0];  //why struct
@@ -46,10 +47,10 @@ void cycle_menu(menu* menu){
 	else{
 		
 		while(1){
+			move=menu_touch_gesture(&x, &y);
 			update_display(menu, &menu_display);
 			display_menu(&menu_display);
-			move = menu_touch_gesture();
-			if( get_key('s') || move == TOUCH_DOWN ){	
+			if( get_key('s') || move == TOUCH_UP ){	
 				menu_display.previous = menu->token;				
 				menu->token = menu->token + 1;
 				if ( menu->token > menu->submenus ){
@@ -62,7 +63,7 @@ void cycle_menu(menu* menu){
 				display_menu(&menu_display);			
 			}
 			
-			if( get_key('w')  ){		
+			if( get_key('w') || move == TOUCH_DOWN ){		
 				menu_display.previous = menu->token;	
 				menu->token = menu->token - 1;
 				if ( menu->token < 1 ){
@@ -75,7 +76,7 @@ void cycle_menu(menu* menu){
 				display_menu(&menu_display);	
 			}
 			
-			if(get_key('a')){
+			if(get_key('a') ){
 				menu_display.screen_refresh = 1;
 				menu_display.option_refresh = 1;
 				menu_display.title_refresh = 1;
@@ -83,7 +84,7 @@ void cycle_menu(menu* menu){
 				return;
 			}
 			
-			if(get_key('d')){
+			if(get_key('d') ){
 				menu_display.screen_refresh = 1;
 				menu_display.option_refresh = 1;
 				menu_display.title_refresh = 1;
@@ -92,13 +93,15 @@ void cycle_menu(menu* menu){
 
 			}
 			
-			for(i=0;i<menu->submenus;i++){
-				if(button_pressed(&button[i])){
-					menu_display.screen_refresh = 1;
-					menu_display.option_refresh = 1;
-					menu_display.title_refresh = 1;
-					menu_display.refresh = 1;
-					cycle_menu(menu->submenu[i+menu_display.first-1]);
+			if(move == TOUCH_CLICK){
+				for(i=0;i<menu->submenus;i++){
+					if(check_button_pressed(&button[i], x, y)){
+						menu_display.screen_refresh = 1;
+						menu_display.option_refresh = 1;
+						menu_display.title_refresh = 1;
+						menu_display.refresh = 1;
+						cycle_menu(menu->submenu[i+menu_display.first-1]);
+					}
 				}
 			}
 		}

@@ -113,7 +113,7 @@ void get_touch_coordinates(uint16_t* X, uint16_t* Y){
 			char number[10],i;
 			if(GPIO_ReadInputDataBit(XPT2046_PENIRQ_PORT, XPT2046_PENIRQ_PIN)==0){
 				if(pen_up_flag){
-					for(i = 0; i<100; i++){
+					for(i = 0; i<50; i++){
 						XPT2046_to_240_320();		//or simple delay
 					}
 					pen_up_flag = 0;
