@@ -30,7 +30,7 @@
 
 /* Put your global defines for all libraries here used in your project */
 
-#define ILI9341_SPI                 SPI3 //OR something similar
+#define ILI9341_SPI                 SPI1 //OR something similar
 #define ILI9341_SPI_PINS  TM_SPI_PinsPack_1 // GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5
  
 /* Change custom CS, DC and RESET pins */
@@ -47,7 +47,7 @@
 #define ILI9341_RST_PORT            GPIOD
 #define ILI9341_RST_PIN                GPIO_Pin_6
 
-#define TM_SPI3_PRESCALER	SPI_BaudRatePrescaler_2
+#define TM_SPI1_PRESCALER	SPI_BaudRatePrescaler_2
 
 /////////////////////
 
