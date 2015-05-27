@@ -140,9 +140,9 @@ void DebugMon_Handler(void)
   * @param  None
   * @retval None
   */
-__weak void TimingDelay_Decrement(void) {
+//__weak void TimingDelay_Decrement(void) {
 
-}
+//}
 
 /**
   * @brief  This function handles SysTick Handler.

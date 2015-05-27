@@ -3,6 +3,7 @@
 #include "menu_event.h"
 #include "menu_button.h"
 #include "menu_touch.h"
+#include <stdio.h>
 
 
 
@@ -36,12 +37,14 @@ void cycle_menu(menu* menu){
 	
 	
 	if(menu->submenus == 0){	//This menu don't have submenus, so it is a command
-		menu->function();
-		menu_display.screen_refresh = 1;
-		menu_display.option_refresh = 1;
-		menu_display.title_refresh = 1;
-		menu_display.refresh = 1;
-		return;
+		if(menu->function != NULL){
+			menu->function();
+			menu_display.screen_refresh = 1;
+			menu_display.option_refresh = 1;
+			menu_display.title_refresh = 1;
+			menu_display.refresh = 1;
+			return;
+		}
 	}
 	
 	else{
@@ -126,17 +129,18 @@ void display_menu(display* menu_display){
 	if(menu_display->option_refresh){
 		for(i = menu_display->first;i <= menu_display->last;i++){
 			menu_display_puts(5, 10+((i-menu_display->first+1)*40), blanks, &MENU_FONT, BLACK, WHITE);
-				
-//			if(menu_display->selected == i)TM_ILI9341_Puts(5, 10+((i-menu_display->first+1)*40), menu_display->option[i-1], &MENU_FONT, ILI9341_COLOR_WHITE, ILI9341_COLOR_BLACK);
 			menu_display_puts(5, 10+((i-menu_display->first+1)*40), menu_display->option[i-1], &MENU_FONT, BLACK, WHITE);
 		}
 		menu_display->option_refresh = 0;
 	}
 	if(menu_display->refresh ){
-		//TM_ILI9341_Puts(5, 10+((menu_display->previous-menu_display->first+1)*40), blanks, &MENU_FONT, ILI9341_COLOR_BLACK, ILI9341_COLOR_WHITE);
-		menu_display_puts(5, 10+((menu_display->previous-menu_display->first+1)*40), menu_display->option[menu_display->previous-1], &MENU_FONT, BLACK, WHITE);
-		//TM_ILI9341_Puts(5, 10+((menu_display->selected-menu_display->first+1)*40), blanks, &MENU_FONT, ILI9341_COLOR_WHITE, ILI9341_COLOR_BLACK);
-		menu_display_puts(5, 10+((menu_display->selected-menu_display->first+1)*40), menu_display->option[menu_display->selected-1], &MENU_FONT, WHITE, BLACK);
+		menu_display_draw_rectangle(0, ((menu_display->previous-menu_display->first+1)*40), MENU_WIDTH, ((menu_display->previous-menu_display->first+1)*40)+40, WHITE);
+		menu_display_draw_rectangle(0+1, ((menu_display->previous-menu_display->first+1)*40)+1, MENU_WIDTH-1, ((menu_display->previous-menu_display->first+1)*40)+40-1, WHITE);
+	
+		menu_display_draw_rectangle(0, ((menu_display->selected-menu_display->first+1)*40), MENU_WIDTH, ((menu_display->selected-menu_display->first+1)*40)+40, BLACK);
+		menu_display_draw_rectangle(0+1, ((menu_display->selected-menu_display->first+1)*40)+1, MENU_WIDTH-1, ((menu_display->selected-menu_display->first+1)*40)+40-1, BLACK);
+//		menu_display_puts(5, 10+((menu_display->previous-menu_display->first+1)*40), menu_display->option[menu_display->previous-1], &MENU_FONT, BLACK, WHITE);
+//		menu_display_puts(5, 10+((menu_display->selected-menu_display->first+1)*40), menu_display->option[menu_display->selected-1], &MENU_FONT, WHITE, BLACK);
 		menu_display->refresh = 0;
 	}
 }

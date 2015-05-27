@@ -36,7 +36,7 @@ void USART1_Init(){
 	USART_Cmd(USART1, ENABLE);
 	
 	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 6;			//Because of FreeRTOS
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 7;			//Because of FreeRTOS
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);

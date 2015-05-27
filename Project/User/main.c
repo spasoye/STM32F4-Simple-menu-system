@@ -5,9 +5,8 @@
 ////////////////////////////////////////////////////
 void RTOS_test(){
 	while(1){
-		vTaskDelay(100);
 		USART_puts(USART1, "Zdravo");
-		
+		vTaskDelay(200);
 	}
 }
 ////////////////////////////////////////////////////
@@ -22,11 +21,8 @@ void menu_task(){
 ////////////////////////////////////////////////////
 int main(void) {
 
-    //Initialize ILI9341
     TM_ILI9341_Init();
-		
-		//Initialize ILI9341
-		//XPT2046_Init(); 
+
 		
 		////////////////////////////
 		USART1_Init();
@@ -36,14 +32,14 @@ int main(void) {
 		TM_ILI9341_DrawCircle(240-20, 20+40, 10, ILI9341_COLOR_BLACK);
 		TM_ILI9341_Fill(ILI9341_COLOR_WHITE);
     //////////////////////
-	
+//		menu_touch_init();
+//		while(1){
+//			cycle_menu(&main_menu);
+//		}
 		xTaskCreate(RTOS_test , "PWM", 512, NULL, 1, NULL );
-		xTaskCreate(menu_task , "PWM", 512, NULL, 1, NULL );
+		xTaskCreate(menu_task , "Menu", 2048, NULL, 1, NULL );
 
-	
 		vTaskStartScheduler();
-
-		
 		
     while (1) {
 				

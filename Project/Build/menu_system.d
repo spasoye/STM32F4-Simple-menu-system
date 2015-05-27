@@ -41,3 +41,4 @@
 .\build\menu_system.o: ..\Menu\menu_event.h
 .\build\menu_system.o: ..\Menu\menu_button.h
 .\build\menu_system.o: ..\Menu\menu_touch.h
+.\build\menu_system.o: D:\Program Files\Keil uVision 5\ARM\ARMCC\Bin\..\include\stdio.h

@@ -29,7 +29,7 @@ Build target 'Target 1'
 compiling main.c...
 ..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
     #define STM32F40_41xxx
-..\Menu\menu_system.h(48): warning:  #1-D: last line of file ends without a newline
+..\Menu\menu_system.h(49): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\Menu\menu_functions.h(27): warning:  #1295-D: Deprecated declaration LED - give arg types
   void LED();
@@ -71,209 +71,15 @@ User\XPT2046.h(29): warning:  #1295-D: Deprecated declaration XPT2046_to_240_320
   void XPT2046_to_240_320();
 User\XPT2046.h(32): warning:  #1-D: last line of file ends without a newline
   #endif
-User\main.c(40): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "TaskFunction_t"
+User\main.c(39): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "TaskFunction_t"
                 xTaskCreate(RTOS_test , "PWM", 512, NULL, 1, NULL );
-User\main.c(41): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "TaskFunction_t"
-                xTaskCreate(menu_task , "PWM", 512, NULL, 1, NULL );
+User\main.c(40): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "TaskFunction_t"
+                xTaskCreate(menu_task , "Menu", 2048, NULL, 1, NULL );
 User\main.c: 24 warnings, 0 errors
-compiling XPT2046.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-User\XPT2046.h(22): warning:  #1295-D: Deprecated declaration XPT2046_Init - give arg types
-  void XPT2046_Init();
-User\XPT2046.h(24): warning:  #1295-D: Deprecated declaration XPT2046_read_x - give arg types
-  uint16_t XPT2046_read_x();
-User\XPT2046.h(25): warning:  #1295-D: Deprecated declaration XPT2046_read_y - give arg types
-  uint16_t XPT2046_read_y();
-User\XPT2046.h(26): warning:  #1295-D: Deprecated declaration XPT2046_read - give arg types
-  uint16_t XPT2046_read();
-User\XPT2046.h(27): warning:  #1295-D: Deprecated declaration XPT2046_pressed - give arg types
-  uint8_t XPT2046_pressed();
-User\XPT2046.h(28): warning:  #1295-D: Deprecated declaration XPT2046_round_read - give arg types
-  void XPT2046_round_read();
-User\XPT2046.h(29): warning:  #1295-D: Deprecated declaration XPT2046_to_240_320 - give arg types
-  void XPT2046_to_240_320();
-User\XPT2046.h(32): warning:  #1-D: last line of file ends without a newline
-  #endif
-User\XPT2046.c(68): warning:  #177-D: variable "t" was declared but never referenced
-                u8 t,t1,count=0, i;
-User\XPT2046.c(68): warning:  #177-D: variable "t1" was declared but never referenced
-                u8 t,t1,count=0, i;
-User\XPT2046.c(70): warning:  #177-D: variable "temp" was declared but never referenced
-                u16 temp=0;     
-User\XPT2046.c(113): warning:  #177-D: variable "number" was declared but never referenced
-                        char number[10],i;
-User\XPT2046.c: 13 warnings, 0 errors
-compiling tm_stm32f4_ili9341.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\TM\tm_stm32f4_ili9341.c: 1 warning, 0 errors
-compiling tm_stm32f4_spi.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\TM\tm_stm32f4_spi.c: 1 warning, 0 errors
-compiling tm_stm32f4_gpio.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\TM\tm_stm32f4_gpio.c: 1 warning, 0 errors
-compiling tm_stm32f4_fonts.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\TM\tm_stm32f4_fonts.c: 1 warning, 0 errors
-compiling tm_stm32f4_delay.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\TM\tm_stm32f4_delay.c: 1 warning, 0 errors
-compiling tm_stm32f4_timer_properties.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\TM\tm_stm32f4_timer_properties.c: 1 warning, 0 errors
-compiling menu_system.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\Menu\menu_system.h(48): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_display.h(32): warning:  #1295-D: Deprecated declaration menu_display_init - give arg types
-  void menu_display_init();
-..\Menu\menu_display.h(41): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_event.h(15): warning:  #1295-D: Deprecated declaration read_key - give arg types
-  char read_key();
-..\Menu\menu_event.h(16): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_touch.h(15): warning:  #1295-D: Deprecated declaration menu_touch_init - give arg types
-  void menu_touch_init();
-..\Menu\menu_touch.h(17): warning:  #1295-D: Deprecated declaration menu_touch_pressed - give arg types
-  uint8_t menu_touch_pressed();
-..\Menu\menu_touch.h(20): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_button.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_system.c(181): warning:  #1-D: last line of file ends without a newline
-  }
-..\Menu\menu_system.c: 11 warnings, 0 errors
-compiling menu_functions.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\Menu\menu_system.h(48): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_functions.h(27): warning:  #1295-D: Deprecated declaration LED - give arg types
-  void LED();
-..\Menu\menu_functions.h(28): warning:  #1295-D: Deprecated declaration verzija - give arg types
-  void verzija();
-..\Menu\menu_functions.h(29): warning:  #1295-D: Deprecated declaration apocalypse - give arg types
-  void apocalypse();
-..\Menu\menu_functions.h(31): warning:  #1295-D: Deprecated declaration touch - give arg types
-  void touch();
-..\Menu\menu_functions.h(34): warning:  #1295-D: Deprecated declaration terminal - give arg types
-  void terminal();
-..\Menu\menu_functions.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif
-.\User\USART.h(8): warning:  #1295-D: Deprecated declaration USART1_IRQHandler - give arg types
-  void USART1_IRQHandler();
-..\Menu\menu_event.h(15): warning:  #1295-D: Deprecated declaration read_key - give arg types
-  char read_key();
-..\Menu\menu_event.h(16): warning:  #1-D: last line of file ends without a newline
-  #endif
-.\User\XPT2046.h(22): warning:  #1295-D: Deprecated declaration XPT2046_Init - give arg types
-  void XPT2046_Init();
-.\User\XPT2046.h(24): warning:  #1295-D: Deprecated declaration XPT2046_read_x - give arg types
-  uint16_t XPT2046_read_x();
-.\User\XPT2046.h(25): warning:  #1295-D: Deprecated declaration XPT2046_read_y - give arg types
-  uint16_t XPT2046_read_y();
-.\User\XPT2046.h(26): warning:  #1295-D: Deprecated declaration XPT2046_read - give arg types
-  uint16_t XPT2046_read();
-.\User\XPT2046.h(27): warning:  #1295-D: Deprecated declaration XPT2046_pressed - give arg types
-  uint8_t XPT2046_pressed();
-.\User\XPT2046.h(28): warning:  #1295-D: Deprecated declaration XPT2046_round_read - give arg types
-  void XPT2046_round_read();
-.\User\XPT2046.h(29): warning:  #1295-D: Deprecated declaration XPT2046_to_240_320 - give arg types
-  void XPT2046_to_240_320();
-.\User\XPT2046.h(32): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_touch.h(15): warning:  #1295-D: Deprecated declaration menu_touch_init - give arg types
-  void menu_touch_init();
-..\Menu\menu_touch.h(17): warning:  #1295-D: Deprecated declaration menu_touch_pressed - give arg types
-  uint8_t menu_touch_pressed();
-..\Menu\menu_touch.h(20): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_button.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_display.h(32): warning:  #1295-D: Deprecated declaration menu_display_init - give arg types
-  void menu_display_init();
-..\Menu\menu_display.h(41): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_functions.c(238): warning:  #236-D: controlling expression is constant
-                if(menu_touch_pressed){
-..\Menu\menu_functions.c(169): warning:  #177-D: variable "X_string" was declared but never referenced
-        char X_string[5], Y_string[5];
-..\Menu\menu_functions.c(169): warning:  #177-D: variable "Y_string" was declared but never referenced
-        char X_string[5], Y_string[5];
-..\Menu\menu_functions.c(170): warning:  #177-D: variable "i" was declared but never referenced
-        uint32_t i;
-..\Menu\menu_functions.c(172): warning:  #177-D: variable "move" was declared but never referenced
-        touch_gesture move;
-..\Menu\menu_functions.c: 30 warnings, 0 errors
-compiling menu_button.c...
-..\Menu\menu_touch.h(15): warning:  #1295-D: Deprecated declaration menu_touch_init - give arg types
-  void menu_touch_init();
-..\Menu\menu_touch.h(17): warning:  #1295-D: Deprecated declaration menu_touch_pressed - give arg types
-  uint8_t menu_touch_pressed();
-..\Menu\menu_touch.h(20): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_button.h(30): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\Menu\menu_display.h(32): warning:  #1295-D: Deprecated declaration menu_display_init - give arg types
-  void menu_display_init();
-..\Menu\menu_display.h(41): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_button.c(55): warning:  #1-D: last line of file ends without a newline
-  }
-..\Menu\menu_button.c: 8 warnings, 0 errors
-compiling menu_touch.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-.\User\XPT2046.h(22): warning:  #1295-D: Deprecated declaration XPT2046_Init - give arg types
-  void XPT2046_Init();
-.\User\XPT2046.h(24): warning:  #1295-D: Deprecated declaration XPT2046_read_x - give arg types
-  uint16_t XPT2046_read_x();
-.\User\XPT2046.h(25): warning:  #1295-D: Deprecated declaration XPT2046_read_y - give arg types
-  uint16_t XPT2046_read_y();
-.\User\XPT2046.h(26): warning:  #1295-D: Deprecated declaration XPT2046_read - give arg types
-  uint16_t XPT2046_read();
-.\User\XPT2046.h(27): warning:  #1295-D: Deprecated declaration XPT2046_pressed - give arg types
-  uint8_t XPT2046_pressed();
-.\User\XPT2046.h(28): warning:  #1295-D: Deprecated declaration XPT2046_round_read - give arg types
-  void XPT2046_round_read();
-.\User\XPT2046.h(29): warning:  #1295-D: Deprecated declaration XPT2046_to_240_320 - give arg types
-  void XPT2046_to_240_320();
-.\User\XPT2046.h(32): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_touch.h(15): warning:  #1295-D: Deprecated declaration menu_touch_init - give arg types
-  void menu_touch_init();
-..\Menu\menu_touch.h(17): warning:  #1295-D: Deprecated declaration menu_touch_pressed - give arg types
-  uint8_t menu_touch_pressed();
-..\Menu\menu_touch.h(20): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_touch.c(54): warning:  #1-D: last line of file ends without a newline
-  }
-..\Menu\menu_touch.c: 13 warnings, 0 errors
-compiling menu_display.c...
-..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h(93): warning:  #47-D: incompatible redefinition of macro "STM32F40_41xxx"
-    #define STM32F40_41xxx
-..\Menu\menu_display.h(32): warning:  #1295-D: Deprecated declaration menu_display_init - give arg types
-  void menu_display_init();
-..\Menu\menu_display.h(41): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Menu\menu_display.c(42): warning:  #1-D: last line of file ends without a newline
-  }
-..\Menu\menu_display.c: 4 warnings, 0 errors
 linking...
-Program Size: Code=19790 RO-data=5858 RW-data=2200 ZI-data=37632  
+Program Size: Code=19802 RO-data=5858 RW-data=2200 ZI-data=37632  
 FromELF: creating hex file...
-".\Build\LCD_menu.axf" - 0 Error(s), 109 Warning(s).
+".\Build\LCD_menu.axf" - 0 Error(s), 24 Warning(s).
 </pre>
 </body>
 </html>

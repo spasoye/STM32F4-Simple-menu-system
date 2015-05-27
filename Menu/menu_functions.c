@@ -92,7 +92,6 @@ void terminal(){
 		if(menu_key_read == 0){
 		charachter = read_key();
 		if(charachter == 13){
-			USART_puts(USART1, "Tu sam2\n\r");
 			for(i = x; i < x_max; i++){
 				x_pointer = i * TERMINAL_FONT_WIDTH;
 				terminal_putc(x_pointer, y_pointer, ' ', &TERMINAL_FONT, ILI9341_COLOR_GREEN, ILI9341_COLOR_BLACK);	
@@ -117,7 +116,7 @@ void terminal(){
 		}
 		
 		if(x_pointer == (TERMINAL_WIDTH/TERMINAL_FONT_WIDTH)*TERMINAL_FONT_WIDTH){
-			USART_puts(USART1, "Tu sam\n\r");
+//			USART_puts(USART1, "Tu sam\n\r");
 			x_pointer = 0;
 			x = 0;
 			y_pointer = y_pointer + TERMINAL_FONT_HEIGHT; 
@@ -125,7 +124,7 @@ void terminal(){
 		}
 		//The terminal is full
 		if(y_pointer == (TERMINAL_HEIGHT/TERMINAL_FONT_HEIGHT)*TERMINAL_FONT_HEIGHT){
-			USART_puts(USART1, "Full terminal");
+//			USART_puts(USART1, "Full terminal");
 			y_pointer = y_pointer - TERMINAL_FONT_HEIGHT;		
 			y = y - 1;
 			for(j = 0; j < y_max-1; j++){
@@ -159,7 +158,7 @@ void terminal_putc(uint16_t x, uint16_t y, char c, TM_FontDef_t *font, uint32_t 
 }
 
 void verzija(){
-	USART_puts(USART1, "Verzija function\n\r");
+	USART_puts(USART1, "Verzija \n");
 	return;
 }
 

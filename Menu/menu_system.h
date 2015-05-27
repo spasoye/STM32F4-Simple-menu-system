@@ -26,6 +26,7 @@ typedef struct display{
 		char first;
 		char last;
 		char selected;
+		uint16_t selected_x1, selected_y1, selected_x2, selected_y2;
 		char previous;
 		char* title;
 		char* option[MENU_HEIGHT];
