@@ -50,6 +50,26 @@
 .\build\main.o: ..\Menu\menu_functions.h
 .\build\main.o: ..\Menu\menu_touch.h
 .\build\main.o: ..\Menu\menu_button.h
+.\build\main.o: ..\STM32_USB_HOST_Library\Core\inc\usbh_core.h
+.\build\main.o: ..\STM32_USB_OTG_Driver\inc\usb_hcd.h
+.\build\main.o: ..\STM32_USB_OTG_Driver\inc\usb_regs.h
+.\build\main.o: .\User\usb_conf.h
+.\build\main.o: ..\STM32_USB_OTG_Driver\inc\usb_core.h
+.\build\main.o: ..\STM32_USB_OTG_Driver\inc\usb_defines.h
+.\build\main.o: ..\STM32_USB_HOST_Library\Core\inc\usbh_def.h
+.\build\main.o: .\User\usbh_conf.h
+.\build\main.o: User\usbh_usr.h
+.\build\main.o: ..\fat_fs\ff11\src\ff.h
+.\build\main.o: ..\fat_fs\ff11\src\integer.h
+.\build\main.o: ..\fat_fs\ff11\src\ffconf.h
+.\build\main.o: ..\STM32_USB_HOST_Library\Class\MSC\inc\usbh_msc_core.h
+.\build\main.o: ..\STM32_USB_HOST_Library\Core\inc\usbh_stdreq.h
+.\build\main.o: ..\STM32_USB_OTG_Driver\inc\usb_bsp.h
+.\build\main.o: ..\STM32_USB_HOST_Library\Core\inc\usbh_ioreq.h
+.\build\main.o: ..\STM32_USB_HOST_Library\Core\inc\usbh_hcs.h
+.\build\main.o: ..\STM32_USB_HOST_Library\Class\MSC\inc\usbh_msc_core.h
+.\build\main.o: ..\STM32_USB_HOST_Library\Class\MSC\inc\usbh_msc_scsi.h
+.\build\main.o: ..\STM32_USB_HOST_Library\Class\MSC\inc\usbh_msc_bot.h
 .\build\main.o: ..\FreeRTOSV8.2.1\FreeRTOS\Source\include\FreeRTOS.h
 .\build\main.o: D:\Program Files\Keil uVision 5\ARM\ARMCC\Bin\..\include\stddef.h
 .\build\main.o: .\User\FreeRTOSConfig.h

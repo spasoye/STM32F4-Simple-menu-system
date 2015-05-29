@@ -3,6 +3,12 @@
 #include "XPT2046.h"
 
 ////////////////////////////////////////////////////
+__ALIGN_BEGIN USB_OTG_CORE_HANDLE      USB_OTG_Core __ALIGN_END;
+
+__ALIGN_BEGIN USBH_HOST                USB_Host __ALIGN_END;
+////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////
 void RTOS_test(){
 	while(1){
 		USART_puts(USART1, "Zdravo");
@@ -19,6 +25,46 @@ void menu_task(){
 	}
 }
 ////////////////////////////////////////////////////
+void usb_task(){
+	  __IO uint32_t i = 0;
+		__IO uint32_t flag = 0;
+	  USBH_Init(&USB_OTG_Core, 
+#ifdef USE_USB_OTG_FS  
+            USB_OTG_FS_CORE_ID,
+#else 
+            USB_OTG_HS_CORE_ID,
+#endif 
+            &USB_Host,
+            &USBH_MSC_cb, 
+            &USR_cb);
+	  while (1)
+		{
+    /* Host Task handler */
+    USBH_Process(&USB_OTG_Core, &USB_Host);
+    
+    if (i++ >= 0x10000) {
+      STM_EVAL_LEDToggle(LED4);
+
+#ifdef USE_USB_OTG_HS 
+      /* check the ID pin */
+      if ((!flag)
+          && (Get_OTG_HS_ID_State()==(uint8_t)Bit_RESET) ){
+        flag = 1;
+        Enable_OTG_HS_PWR();
+      } else if ((flag)
+                 && (Get_OTG_HS_ID_State()==(uint8_t)Bit_SET) ) {
+        flag = 0;
+        Disable_OTG_HS_PWR();
+      }
+#endif
+      i = 0;
+    }      
+	}
+}
+////////////////////////////////////////////////////
+
+
+
 int main(void) {
 
     TM_ILI9341_Init();
@@ -36,8 +82,9 @@ int main(void) {
 //		while(1){
 //			cycle_menu(&main_menu);
 //		}
-		xTaskCreate(RTOS_test , "PWM", 512, NULL, 1, NULL );
+		xTaskCreate(RTOS_test , "Test", 512, NULL, 1, NULL );
 		xTaskCreate(menu_task , "Menu", 2048, NULL, 1, NULL );
+//		xTaskCreate(usb_task , "USB", 2048, NULL, 1, NULL );
 
 		vTaskStartScheduler();
 		

@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
 D:\STM32F4\Završni rad\Project\LCD_menu.uvproj
-Project File Date:  05/10/2015
+Project File Date:  05/29/2015
 
 <h2>Output:</h2>
 Build target 'Target 1'
@@ -51,7 +51,7 @@ compiling main.c...
   #endif
 ..\Menu\menu_button.h(30): warning:  #1-D: last line of file ends without a newline
   #endif
-User\main.h(124): warning:  #1-D: last line of file ends without a newline
+User\main.h(127): warning:  #1-D: last line of file ends without a newline
   #endif
 User\USART.h(8): warning:  #1295-D: Deprecated declaration USART1_IRQHandler - give arg types
   void USART1_IRQHandler();
@@ -71,13 +71,13 @@ User\XPT2046.h(29): warning:  #1295-D: Deprecated declaration XPT2046_to_240_320
   void XPT2046_to_240_320();
 User\XPT2046.h(32): warning:  #1-D: last line of file ends without a newline
   #endif
-User\main.c(39): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "TaskFunction_t"
-                xTaskCreate(RTOS_test , "PWM", 512, NULL, 1, NULL );
-User\main.c(40): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "TaskFunction_t"
+User\main.c(85): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "TaskFunction_t"
+                xTaskCreate(RTOS_test , "Test", 512, NULL, 1, NULL );
+User\main.c(86): warning:  #167-D: argument of type "void (*)()" is incompatible with parameter of type "TaskFunction_t"
                 xTaskCreate(menu_task , "Menu", 2048, NULL, 1, NULL );
 User\main.c: 24 warnings, 0 errors
 linking...
-Program Size: Code=19802 RO-data=5858 RW-data=2200 ZI-data=37632  
+Program Size: Code=30498 RO-data=6118 RW-data=2332 ZI-data=40396  
 FromELF: creating hex file...
 ".\Build\LCD_menu.axf" - 0 Error(s), 24 Warning(s).
 </pre>

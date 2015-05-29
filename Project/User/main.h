@@ -18,6 +18,9 @@
 #include "menu_touch.h"
 #include "menu_button.h"
 
+#include "usbh_core.h"
+#include "usbh_usr.h"
+#include "usbh_msc_core.h"
 
 
 //FreeRTOS includes
