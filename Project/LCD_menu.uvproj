@@ -361,7 +361,7 @@
             <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER,STM32F4XX,KEIL_IDE,TM_DISCO_STM32F4_DISCOVERY,PLL_M=8,PLL_N=336,PLL_P=2,PLL_Q=7,__KEIL__,</Define>
+              <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER,STM32F4XX,KEIL_IDE,TM_DISCO_STM32F4_DISCOVERY,PLL_M=8,PLL_N=336,PLL_P=2,PLL_Q=7,__KEIL__,USE_USB_OTG_FS,USE_ULPI_PHY</Define>
               <Undefine></Undefine>
               <IncludePath>..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Device\ST\STM32F4xx\Include;..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\CMSIS\Include;..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\inc;..\TM;.\User;..\FreeRTOSV8.2.1\FreeRTOS\Source\include;..\FreeRTOSV8.2.1\FreeRTOS\Source\portable\RVDS\ARM_CM4F;..\Menu;..\STM32F4_Discovery;..\fat_fs\ff11\src;..\STM32_USB_HOST_Library\Core\inc;..\STM32_USB_HOST_Library\Class\MSC\inc;..\STM32_USB_OTG_Driver\inc</IncludePath>
             </VariousControls>
@@ -450,6 +450,11 @@
               <FileName>XPT2046.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\XPT2046.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbh_usr_lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\usbh_usr_lcd.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -555,6 +560,16 @@
               <FileName>stm32f4xx_syscfg.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\00-STM32F4xx_STANDARD_PERIPHERAL_DRIVERS\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -670,6 +685,11 @@
               <FileName>usbh_msc_scsi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\STM32_USB_HOST_Library\Class\MSC\src\usbh_msc_scsi.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\usb_bsp.c</FilePath>
             </File>
           </Files>
         </Group>
